@@ -37,6 +37,7 @@ header{
     width: 100vw;
     height: 10vh;
     box-shadow: 0vh 1vh 2vh #1f0000;
+    z-index: 10;
 }
 
 .flexContainer{
@@ -136,3 +137,120 @@ section{
   #aboutMeTitle{
     font-size: 4vh;
   }
+
+      /* //////////////////////////////// */
+
+
+      .project {
+        display: none; 
+      }
+      
+
+        
+
+    .projectContainer{
+      margin: 0 auto;
+      width: 80vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project.active{
+      display: flex;
+      padding:  2vh;
+      border-radius: 5vh;
+      border: #ff0000 0.5vh solid;
+      height: 60vh;
+      width: 80vw;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .projectTextContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 3vh;
+      width: 30vw;
+      height: 100%;
+      text-align: center;
+    }
+
+    .projectTextContainer a:hover{
+      text-decoration: underline #ff0000;
+    }
+
+    .projectContainer p{
+      margin-top: 2.5vh;
+    }
+
+
+    .gamePortofolioImg, .gameScoreCentralImg, .SBImg, .jumpGameImg{
+      border-radius: 5vh;
+      height: 50vh;
+    }
+    .crossroadOfCrimeImg{
+      border-radius: 5vh;
+      height: 50vh;
+      max-width: 35vw;
+      object-fit: cover;
+      object-position: left;
+    }
+
+    #jumpGame ,#crossroadOfCrime{
+      font-size: 3vh;
+      width: 30vw;
+      text-align: center;
+    }
+
+    
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+    }
+    
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+   .projectContainer {
+    position: relative; 
+    margin: 0 auto;
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 77%; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+  button.prev {
+      left: 1vh; 
+  }
+
+  button.next {
+      right: 1vh; 
+  }
+
+  button.prev:hover, button.next:hover {
+      background-color: rgba(0, 0, 0, 0.8); 
+  }
+

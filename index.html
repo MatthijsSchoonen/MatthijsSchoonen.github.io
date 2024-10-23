@@ -53,6 +53,50 @@
 
 
     <section id="myProjects">
+      <div class="projectContainer">
+
+          <div class="carousel-inner lato-regular">
+              <div class="project" >
+                  <img class="gamePortofolioImg" src="img/gamePortofolio.png" alt="gamePortofolio">
+                  <div class="projectTextContainer">
+                    <a href="https://matthijsschoonen.github.io/portofolio/" target="_blank">View Project</a>
+                    <p id="gamePortofolio">dit is een een portofolio website die ik heb gemaakt met de kaboom.js liberary. dit portofolio website heb ik in de stijl van een 2d game gemaakt</p>
+                  </div>
+                 
+              </div>
+
+              <div class="project" >
+                  <img class="gameScoreCentralImg" src="img/GameScoreCentral.png" alt="GameScoreCentral">
+                  <div class="projectTextContainer">
+                    <a href="https://github.com/MatthijsSchoonen/GameScoreCentral" target="_blank">View Project</a>
+                    <p id="GameScoreCentral">GameScoreCentral is een ionic applicatie waarmee ik nog bezig mee ben. met deze applicatie kan je makkelijk de score van darten bijhouden of een tournament generen</p>             
+                  </div>
+              </div>
+
+              <div class="project"  >
+                <img class="SBImg" src="img/SBPortofolio.png" alt="SBPortofolio">
+                <div class="projectTextContainer">
+                  <a href="https://sietsebolders.infinityfreeapp.com/index.php" target="_blank">View website</a>
+                  <p id="SBPortofolio">Dit is de portofolio website die ik voor Sietse Bolders gemaakt heb met zijn Design</p>             
+                </div>
+            </div>
+
+              <div class="project" >
+                <img class="jumpGameImg" src="img/jumpGame.jpg" alt="jumpGame">
+                <p id="jumpGame">Dit is mijn eerste unity project een simpel spel waar je doel is zo lang mogelijk over een blok te springen</p>             
+            </div>
+
+              <div class="project" >
+                <img class="crossroadOfCrimeImg" src="img/crossroadOfCrime.png" alt="crossroadOfCrime">
+                <p id="crossroadOfCrime">crossroadOfCrime is een openworld action adventure game die ik aan het maken ben in unity.</p>             
+            </div>
+          </div>
+
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+        
 
     </section>
 
@@ -64,3 +108,39 @@
 
   </body>
 </html>
+
+<script>
+  const projects = document.querySelectorAll('.project');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  
+  let currentIndex = 0;
+
+  // Function to update visibility of projects
+  function showProject(index) {
+    // Hide all projects
+    projects.forEach((project, i) => {
+      project.classList.remove('active');
+      project.style.display = 'none';
+    });
+    
+    // Show the project at the given index
+    projects[index].classList.add('active');
+    projects[index].style.display = 'flex'; // Make it visible
+  }
+
+  // Show the first project initially
+  showProject(currentIndex);
+
+  // Show the next project
+  nextButton.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % projects.length; // Loop back to the first project
+    showProject(currentIndex);
+  });
+
+  // Show the previous project
+  prevButton.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length; // Loop to the last project
+    showProject(currentIndex);
+  });
+</script>
