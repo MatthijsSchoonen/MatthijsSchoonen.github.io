@@ -1,256 +1,303 @@
-*{
-    margin: 0 ;
-    padding: 0;
-    color:white;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 /* //////////////////////////////// */
 .lato-regular {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .lato-thin {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
-  .oswald{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  /* //////////////////////////////// */
+/* //////////////////////////////// */
 
-header{
+header {
   position: fixed;
-    background-color: #3d0000;
-    width: 100vw;
-    height: 10vh;
-    box-shadow: 0vh 1vh 2vh #1f0000;
-    z-index: 10;
+  background-color: #3d0000;
+  width: 100vw;
+  height: 10vh;
+  box-shadow: 0vh 1vh 2vh #1f0000;
+  z-index: 10;
 }
 
-.flexContainer{
-    margin: 0 auto;
-    width: 80vw;
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
+.flexContainer {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.title{
+.title {
   font-size: 5vh;
 }
 
-.nav{
+.nav {
   width: 30vw;
   display: flex;
   justify-content: space-between;
   font-size: 2.5vh;
 }
 
-.nav a:hover{
+.nav a:hover {
   text-decoration: underline #ff0000;
 }
 
-section{
+section {
   height: 100vh;
   background-color: #3d0000;
   box-shadow: 0vh 1vh 2vh #3d0000;
 }
 
+/* //////////////////////////////// */
 
-  /* //////////////////////////////// */
-
-  #intro{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #intro div{
-    display: flex;
-    width: 50vw;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #introText{
-    background-color: #240000;
-    font-size: 4vh;
-    width: 20vw;
-    border: #240000 2vh solid ;
-    padding:  10vh 5vh;
-    border-radius: 10vh;
-    text-align: center;
-  }
-
-  .introImg{
-    width: 50vw;
-    border-radius:   0 0 0 10vh;
-    object-fit: cover;
-    object-position: left;
-  }
-
-    /* //////////////////////////////// */
-
-    #aboutMe{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .me {
-      border: #ff0000 0.5vh solid; 
-      border-radius: 50%; 
-      width: 30vh;
-      height: 30vh; 
-      object-fit: cover; 
-  }
-
-  #aboutMeText{
-    width: 35vw;
-    font-size: 3vh;
-    border: #ff0000 0.5vh solid; 
-    padding: 2vh;
-    border-radius: 5vh; 
-  }
-  
-  .aboutMeContainer{
-    width: 80vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #aboutMeTitle{
-    font-size: 4vh;
-  }
-
-      /* //////////////////////////////// */
-
-
-      .project {
-        display: none; 
-      }
-      
-
-        
-
-    .projectContainer{
-      margin: 0 auto;
-      width: 80vw;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .project.active{
-      display: flex;
-      padding:  2vh;
-      border-radius: 5vh;
-      border: #ff0000 0.5vh solid;
-      height: 60vh;
-      width: 80vw;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .projectTextContainer{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 3vh;
-      width: 30vw;
-      height: 100%;
-      text-align: center;
-    }
-
-    .projectTextContainer a:hover{
-      text-decoration: underline #ff0000;
-    }
-
-    .projectContainer p{
-      margin-top: 2.5vh;
-    }
-
-
-    .gamePortofolioImg, .gameScoreCentralImg, .SBImg, .jumpGameImg{
-      border-radius: 5vh;
-      height: 50vh;
-    }
-    .crossroadOfCrimeImg{
-      border-radius: 5vh;
-      height: 50vh;
-      max-width: 35vw;
-      object-fit: cover;
-      object-position: left;
-    }
-
-    #jumpGame ,#crossroadOfCrime{
-      font-size: 3vh;
-      width: 30vw;
-      text-align: center;
-    }
-
-    
-    .carousel {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 300px;
-    }
-    
-    .carousel-inner {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-   .projectContainer {
-    position: relative; 
-    margin: 0 auto;
-    width: 80vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#intro {
+  display: flex;
+  justify-content: space-between;
 }
 
-button.prev, button.next {
-    position: absolute;
-    top: 77%; 
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 2rem;
-    border-radius: 50%;
+#intro div {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
 }
 
-  button.prev {
-      left: 1vh; 
-  }
+#introText {
+  background-color: #240000;
+  font-size: 4vh;
+  width: 20vw;
+  border: #240000 2vh solid;
+  padding: 10vh 5vh;
+  border-radius: 10vh;
+  text-align: center;
+}
 
-  button.next {
-      right: 1vh; 
-  }
+.introImg {
+  width: 50vw;
+  border-radius: 0 0 0 10vh;
+  object-fit: cover;
+  object-position: left;
+}
 
-  button.prev:hover, button.next:hover {
-      background-color: rgba(0, 0, 0, 0.8); 
-  }
+/* //////////////////////////////// */
 
+#aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.me {
+  border: #ff0000 0.5vh solid;
+  border-radius: 50%;
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+}
+
+#aboutMeText {
+  width: 40vw;
+  font-size: 3vh;
+  border: #ff0000 0.5vh solid;
+  padding: 2vh;
+  border-radius: 5vh;
+}
+
+.aboutMeContainer {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#aboutMeTitle,
+#projectTitle,
+#contactTitle {
+  text-align: center;
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+/* //////////////////////////////// */
+
+#myProjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.project {
+  display: none;
+}
+
+.projectContainer {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project.active {
+  display: flex;
+  padding: 2vh;
+  border-radius: 5vh;
+  border: #ff0000 0.5vh solid;
+  height: 60vh;
+  width: 80vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projectTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  width: 30vw;
+  height: 100%;
+  text-align: center;
+}
+
+.projectTextContainer a:hover {
+  text-decoration: underline #ff0000;
+}
+
+.projectContainer p {
+  margin-top: 2.5vh;
+}
+
+.gamePortofolioImg,
+.gameScoreCentralImg,
+.SBImg,
+.jumpGameImg {
+  border-radius: 5vh;
+  height: 50vh;
+}
+.crossroadOfCrimeImg {
+  border-radius: 5vh;
+  height: 50vh;
+  max-width: 35vw;
+  object-fit: cover;
+  object-position: left;
+}
+
+#jumpGame,
+#crossroadOfCrime {
+  font-size: 3vh;
+  width: 30vw;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.projectContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 87%;
+  transform: translateY(-50%);
+
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+button.prev {
+  left: 1vh;
+}
+
+button.next {
+  right: 1vh;
+}
+
+i {
+  color: #ff0000;
+}
+
+.projectContainer i:hover {
+  color: #240000;
+}
+
+/* //////////////////////////////// */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.contactContainer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2.5vh;
+  padding: 3vh;
+  border: #ff0000 0.5vh solid;
+  border-radius: 5vh;
+}
+
+.contactContainer a{
+ margin-top: 2vh;
+}
+
+.contactContainer a:hover{
+  color: #ff0000;
+}
+
+/* //////////////////////////////// */
