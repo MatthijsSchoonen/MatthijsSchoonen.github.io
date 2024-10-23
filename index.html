@@ -20,17 +20,20 @@
     <header>
       <div class="flexContainer">
           <a href="#intro" class="title Oswald">Matthijs Schoonen<span style="color: #ff0000">.</span></a>
-          <div class="nav lato-regular">
-            <a href="#aboutMe">About Me</a>
-            <a href="#myProjects">My Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
+          <nav class="nav lato-regular">
+            <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
+            <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
+            <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
+            <button id="lang-en" class="language-btn"><img src="img/uk.svg"></button>
+            <button id="lang-nl" class="language-btn"><img src="img/nl.svg"></button>
+          </nav>
+      
       </div>
     </header>
 
     <section id="intro">
         <div>
-          <p id="introText" class="Oswald">
+          <p id="introText" class="Oswald" data-translate="introText">
             Mijn naam is <br/><span  style="color: #ff0000">Matthijs Schoonen</span> <br/>
             welkom op mijn portofolio website
           </p>
@@ -42,10 +45,10 @@
 
     <section id="aboutMe">
       <div>
-        <p id="aboutMeTitle" class="Oswald">About Me</p>
+        <p id="aboutMeTitle" class="Oswald" ata-translate="aboutMe">About Me</p>
         <div class="aboutMeContainer">      
           <img class="me" src="img/me.jpg">
-          <p id="aboutMeText" class="lato-regular">Mijn naam is Matthijs Schoonen en ik ben 18 jaar oud. Ik zit in het derde jaar van de opleiding Software Developer. Mijn passie voor technologie en programmeren motiveert mij om door te leren en mezelf te ontwikkelen. Momenteel werk ik bij Innovend, waar ik de kans krijg om mijn vaardigheden in de praktijk toe te passen en te groeien in een professionele omgeving. In mijn vrije tijd Werk ik aan eigen projecten en bouw ik af en toe computers</p>
+          <p id="aboutMeText" class="lato-regular" data-translate="aboutMeText">Mijn naam is Matthijs Schoonen en ik ben 18 jaar oud. Ik zit in het derde jaar van de opleiding Software Developer. Mijn passie voor technologie en programmeren motiveert mij om door te leren en mezelf te ontwikkelen. Momenteel werk ik bij Innovend, waar ik de kans krijg om mijn vaardigheden in de praktijk toe te passen en te groeien in een professionele omgeving. In mijn vrije tijd Werk ik aan eigen projecten en bouw ik af en toe computers</p>
         </div>
       </div>
     </section>
@@ -53,15 +56,15 @@
 
 
     <section id="myProjects">
-      <p id="projectTitle" class="Oswald">My Projects</p>
+      <p id="projectTitle" class="Oswald" data-translate="myProjects">My Projects</p>
       <div class="projectContainer">
 
           <div class="carousel-inner lato-regular">
               <div class="project" >
                   <img class="gamePortofolioImg" src="img/gamePortofolio.png" alt="gamePortofolio">
                   <div class="projectTextContainer">
-                    <a href="https://matthijsschoonen.github.io/portofolio/" target="_blank">View Project</a>
-                    <p id="gamePortofolio">dit is een een portofolio website die ik heb gemaakt met de kaboom.js liberary. dit portofolio website heb ik in de stijl van een 2d game gemaakt</p>
+                    <a href="https://matthijsschoonen.github.io/portofolio/" target="_blank" data-translate="viewProject">View Project</a>
+                    <p id="gamePortofolio" data-translate="gamePortofolio">dit is een een portofolio website die ik heb gemaakt met de kaboom.js liberary. dit portofolio website heb ik in de stijl van een 2d game gemaakt</p>
                   </div>
                  
               </div>
@@ -69,27 +72,27 @@
               <div class="project" >
                   <img class="gameScoreCentralImg" src="img/GameScoreCentral.png" alt="GameScoreCentral">
                   <div class="projectTextContainer">
-                    <a href="https://github.com/MatthijsSchoonen/GameScoreCentral" target="_blank">View Project</a>
-                    <p id="GameScoreCentral">GameScoreCentral is een ionic applicatie waarmee ik nog bezig mee ben. met deze applicatie kan je makkelijk de score van darten bijhouden of een tournament generen</p>             
+                    <a href="https://github.com/MatthijsSchoonen/GameScoreCentral" target="_blank" data-translate="viewProject">View Project</a>
+                    <p id="GameScoreCentral" data-translate="GameScoreCentral">GameScoreCentral is een ionic applicatie waarmee ik nog bezig mee ben. met deze applicatie kan je makkelijk de score van darten bijhouden of een tournament generen</p>             
                   </div>
               </div>
 
               <div class="project"  >
                 <img class="SBImg" src="img/SBPortofolio.png" alt="SBPortofolio">
                 <div class="projectTextContainer">
-                  <a href="https://sietsebolders.infinityfreeapp.com/index.php" target="_blank">View website</a>
-                  <p id="SBPortofolio">Dit is de portofolio website die ik voor Sietse Bolders gemaakt heb met zijn Design</p>             
+                  <a href="https://sietsebolders.infinityfreeapp.com/index.php" target="_blank" data-translate="viewProject">View website</a>
+                  <p id="SBPortofolio" data-translate="SBPortofolio">Dit is de portofolio website die ik voor Sietse Bolders gemaakt heb met zijn Design</p>             
                 </div>
             </div>
 
               <div class="project" >
                 <img class="jumpGameImg" src="img/jumpGame.jpg" alt="jumpGame">
-                <p id="jumpGame">Dit is mijn eerste unity project een simpel spel waar je doel is zo lang mogelijk over een blok te springen</p>             
+                <p id="jumpGame" data-translate="jumpGame">Dit is mijn eerste unity project een simpel spel waar je doel is zo lang mogelijk over een blok te springen</p>             
             </div>
 
               <div class="project" >
                 <img class="crossroadOfCrimeImg" src="img/crossroadOfCrime.png" alt="crossroadOfCrime">
-                <p id="crossroadOfCrime">crossroadOfCrime is een openworld action adventure game die ik aan het maken ben in unity.</p>             
+                <p id="crossroadOfCrime" data-translate="crossroadOfCrime">crossroadOfCrime is een openworld action adventure game die ik aan het maken ben in unity.</p>             
             </div>
           </div>
 
@@ -103,7 +106,7 @@
 
 
     <section id="contact">
-        <p id="contactTitle" class="Oswald">Contact</p>
+        <p id="contactTitle" class="Oswald" data-translate="contact">Contact</p>
         <div class="contactContainer lato-regular">
           <a href="https://github.com/MatthijsSchoonen/"><i class="fa-brands fa-github"></i> MatthijsSchoonen</a>
           <a href="https://www.instagram.com/matthijs_schoonen/"><i class="fa-brands fa-instagram"></i> matthijs_schoonen</a>
@@ -115,7 +118,11 @@
 
   </body>
   <footer>
-    
+    <div class="footerContainer">
+      <a href="https://www.instagram.com/matthijs_schoonen/"><i class="fa-brands fa-instagram"></i></a>
+      <p class="Oswald"><span style="color:#ff0000;">©</span> <span id="year"></span> Matthijs Schoonen</p>
+      <a href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </footer>
 </html>
 
@@ -126,31 +133,102 @@
   
   let currentIndex = 0;
 
-  // Function to update visibility of projects
   function showProject(index) {
-    // Hide all projects
+
     projects.forEach((project, i) => {
       project.classList.remove('active');
       project.style.display = 'none';
     });
     
-    // Show the project at the given index
+
     projects[index].classList.add('active');
-    projects[index].style.display = 'flex'; // Make it visible
+    projects[index].style.display = 'flex'; 
   }
 
-  // Show the first project initially
   showProject(currentIndex);
 
-  // Show the next project
   nextButton.addEventListener('click', function() {
-    currentIndex = (currentIndex + 1) % projects.length; // Loop back to the first project
+    currentIndex = (currentIndex + 1) % projects.length;
     showProject(currentIndex);
   });
 
-  // Show the previous project
   prevButton.addEventListener('click', function() {
-    currentIndex = (currentIndex - 1 + projects.length) % projects.length; // Loop to the last project
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
     showProject(currentIndex);
   });
+
+
+
+  const year = new Date().getFullYear();
+  document.getElementById('year').textContent = year;
+
+
+
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const link = document.querySelector(`nav a[href="#${id}"]`);
+
+      if (entry.isIntersecting) {
+      
+        link.classList.add('active');
+      } else {
+      
+        link.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.6 
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+
+
+
+
+  let translations = {};
+
+  // Load translations from a JSON file
+  async function loadTranslations() {
+    const response = await fetch('translations/translations.json');
+    translations = await response.json();
+  }
+
+  // Function to change language
+  function changeLanguage(language) {
+    // Update the text content based on the selected language
+    document.querySelectorAll("[data-translate]").forEach(element => {
+      const key = element.getAttribute("data-translate");
+      element.textContent = translations[language][key];
+    });
+
+    // Remove 'active' class from all language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Add 'active' class to the currently selected language button
+    document.getElementById(`lang-${language}`).classList.add('active');
+  }
+
+  // Load translations when the page loads
+  window.onload = async () => {
+    await loadTranslations();
+
+    // Default language
+    changeLanguage("en");
+    
+    // Add event listeners to change language buttons
+    document.getElementById('lang-en').addEventListener('click', () => changeLanguage('nl'));
+    document.getElementById('lang-nl').addEventListener('click', () => changeLanguage('en'));
+  };
+
+
 </script>

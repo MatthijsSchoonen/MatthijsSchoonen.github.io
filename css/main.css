@@ -15,6 +15,10 @@ input[type="reset"] {
   outline: inherit;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -45,6 +49,7 @@ header {
   position: fixed;
   background-color: #3d0000;
   width: 100vw;
+  max-width: 100vw;
   height: 10vh;
   box-shadow: 0vh 1vh 2vh #1f0000;
   z-index: 10;
@@ -133,6 +138,7 @@ section {
   border: #ff0000 0.5vh solid;
   padding: 2vh;
   border-radius: 5vh;
+  text-align: center;
 }
 
 .aboutMeContainer {
@@ -301,3 +307,42 @@ i {
 }
 
 /* //////////////////////////////// */
+
+footer{
+    background-color: #3d0000;
+    width: 100vw;
+    max-width: 100vw;
+    height: 10vh;
+    box-shadow: 0vh -1vh 1vh #1f0000;
+    z-index: 10;
+}
+
+.footerContainer{
+  font-size: 3vh;
+  margin: 0 auto;
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav a.active{
+  color: #ff0000;
+}
+
+#lang-en img, #lang-nl img{
+  height: 3vh;
+}
+
+#lang-en, #lang-nl{
+  display: none;
+}
+
+#lang-en.active, #lang-nl.active{
+  display: block;
+}
