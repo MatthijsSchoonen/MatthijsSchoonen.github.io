@@ -65,6 +65,8 @@ header{
 
 section{
   height: 100vh;
+  background-color: #3d0000;
+  box-shadow: 0vh 1vh 2vh #3d0000;
 }
 
 
@@ -73,7 +75,6 @@ section{
   #intro{
     display: flex;
     justify-content: space-between;
-    background-color: #3d0000;
   }
 
   #intro div{
@@ -94,6 +95,44 @@ section{
   }
 
   .introImg{
-    height: 100%;
+    width: 50vw;
     border-radius:   0 0 0 10vh;
+    object-fit: cover;
+    object-position: left;
+  }
+
+    /* //////////////////////////////// */
+
+    #aboutMe{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .me {
+      border: #ff0000 0.5vh solid; 
+      border-radius: 50%; 
+      width: 30vh;
+      height: 30vh; 
+      object-fit: cover; 
+  }
+
+  #aboutMeText{
+    width: 35vw;
+    font-size: 3vh;
+    border: #ff0000 0.5vh solid; 
+    padding: 2vh;
+    border-radius: 5vh; 
+  }
+  
+  .aboutMeContainer{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #aboutMeTitle{
+    font-size: 4vh;
   }
