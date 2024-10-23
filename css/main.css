@@ -49,14 +49,14 @@ header{
 }
 
 .title{
-  font-size: 3rem;
+  font-size: 5vh;
 }
 
 .nav{
   width: 30vw;
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
 }
 
 .nav a:hover{
@@ -66,3 +66,34 @@ header{
 section{
   height: 100vh;
 }
+
+
+  /* //////////////////////////////// */
+
+  #intro{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3d0000;
+  }
+
+  #intro div{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #introText{
+    background-color: #240000;
+    font-size: 4vh;
+    width: 20vw;
+    border: #240000 2vh solid ;
+    padding:  10vh 5vh;
+    border-radius: 10vh;
+    text-align: center;
+  }
+
+  .introImg{
+    height: 100%;
+    border-radius:   0 0 0 10vh;
+  }
