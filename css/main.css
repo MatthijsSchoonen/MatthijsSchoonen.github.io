@@ -336,9 +336,10 @@ nav a.active{
   color: #ff0000;
 }
 
-#lang-en img, #lang-nl img{
+.language-btn img{
   height: 3vh;
 }
+
 
 #lang-en, #lang-nl{
   display: none;
@@ -414,6 +415,10 @@ nav a.active{
   font-size: 2rem;
   z-index: 11;
 }
+.language-section {
+
+  z-index: 1001; 
+}
 
 #hamburgerBTN i:hover{
   color: #240000;
@@ -487,5 +492,8 @@ nav a.active{
 
   #jumpGame, #crossroadOfCrime{
     width: 60vw;
+  }
+  .footerContainer{
+    font-size: 2vh;
   }
 }

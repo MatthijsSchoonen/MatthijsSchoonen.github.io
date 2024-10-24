@@ -19,23 +19,33 @@
 <body>
     <header>
       <div class="flexContainer">
-          <a href="#intro" class="title Oswald">Matthijs Schoonen<span style="color: #ff0000">.</span></a>
-          <nav class="nav lato-regular">
-            <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
-            <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
-            <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
-            <button id="lang-en" class="language-btn"><img src="img/uk.svg"></button>
-            <button id="lang-nl" class="language-btn"><img src="img/nl.svg"></button>
-          </nav>
-          <button id="hamburgerBTN"><i class="fa-solid fa-bars"></i></button>
-          <nav class="hamburgerMenu lato-regular">
-            <button id="hamburgerClose"><i class="fa-solid fa-x"></i></button>
-            <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
-            <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
-            <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
-            <button id="lang-en" class="language-btn"><img src="img/uk.svg"></button>
-            <button id="lang-nl" class="language-btn"><img src="img/nl.svg"></button>
-          </nav>
+        <a href="#intro" class="title Oswald">Matthijs Schoonen<span style="color: #ff0000">.</span></a>
+        <nav class="nav lato-regular">
+          <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
+          <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
+          <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
+          
+          <!-- Language Buttons -->
+          <button class="language-btn" data-lang="en"><img src="img/nl.svg" alt="Dutch"></button>
+          <button class="language-btn" data-lang="nl"><img src="img/uk.svg" alt="English"></button>
+        </nav>
+      
+        <!-- Hamburger Button for Mobile -->
+        <button id="hamburgerBTN"><i class="fa-solid fa-bars"></i></button>
+      
+        <!-- Hamburger Menu -->
+        <nav class="hamburgerMenu lato-regular">
+          <button id="hamburgerClose"><i class="fa-solid fa-x"></i></button>
+          <a href="#aboutMe" data-translate="aboutMe">About Me</a>
+          <a href="#myProjects" data-translate="myProjects">My Projects</a>
+          <a href="#contact" data-translate="contact">Contact</a>
+      
+          <!-- Language Buttons in Hamburger Menu -->
+          <div class="language-section">
+            <button class="language-btn" data-lang="en"><img src="img/nl.svg" alt="Dutch"></button>
+            <button class="language-btn" data-lang="nl"><img src="img/uk.svg" alt="English"></button>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -202,50 +212,58 @@
 
 
 
-  let translations = {};
+ // Initialize an object to hold the translations
+let translations = {};
 
-  // Load translations from a JSON file
-  async function loadTranslations() {
-    const response = await fetch('translations/translations.json');
-    translations = await response.json();
-  }
+// Load translations from a JSON file
+async function loadTranslations() {
+  const response = await fetch('translations/translations.json');
+  translations = await response.json();
+}
 
-  // Function to change language
-  function changeLanguage(language) {
-    // Update the text content based on the selected language
-    document.querySelectorAll("[data-translate]").forEach(element => {
-      const key = element.getAttribute("data-translate");
-      element.textContent = translations[language][key];
+// Function to change language
+function changeLanguage(language) {
+  // Update the text content based on the selected language
+  document.querySelectorAll("[data-translate]").forEach(element => {
+    const key = element.getAttribute("data-translate");
+    element.textContent = translations[language][key];
+  });
+
+  // Update the active language button across both menus
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
+  });
+}
+
+// Load translations when the page loads
+window.onload = async () => {
+  await loadTranslations();
+
+  // Default language is English
+  let currentLanguage = "en";
+  changeLanguage(currentLanguage);
+
+  // Event listener for language buttons
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selectedLanguage = btn.getAttribute('data-lang');
+      if (selectedLanguage !== currentLanguage) {
+        currentLanguage = selectedLanguage;
+        changeLanguage(currentLanguage);
+      }
     });
-
-    // Remove 'active' class from all language buttons
-    document.querySelectorAll('.language-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-
-    // Add 'active' class to the currently selected language button
-    document.getElementById(`lang-${language}`).classList.add('active');
-  }
-
-  // Load translations when the page loads
-  window.onload = async () => {
-    await loadTranslations();
-
-    // Default language
-    changeLanguage("en");
-    
-    // Add event listeners to change language buttons
-    document.getElementById('lang-en').addEventListener('click', () => changeLanguage('nl'));
-    document.getElementById('lang-nl').addEventListener('click', () => changeLanguage('en'));
-  };
-
+  });
+  
+  // Hamburger menu toggle logic
   document.getElementById("hamburgerBTN").addEventListener("click", function() {
-  document.querySelector(".hamburgerMenu").style.display = "flex";
-});
+    document.querySelector(".hamburgerMenu").style.display = "flex";
+  });
 
-document.getElementById("hamburgerClose").addEventListener("click", function() {
-  document.querySelector(".hamburgerMenu").style.display = "none";
-});
+  document.getElementById("hamburgerClose").addEventListener("click", function() {
+    document.querySelector(".hamburgerMenu").style.display = "none";
+  });
+};
+
 
 
 </script>
