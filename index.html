@@ -24,28 +24,22 @@
           <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
           <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
           <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
-          
-          <!-- Language Buttons -->
           <button class="language-btn" data-lang="en"><img src="img/nl.svg" alt="Dutch"></button>
           <button class="language-btn" data-lang="nl"><img src="img/uk.svg" alt="English"></button>
         </nav>
-      
-        <!-- Hamburger Button for Mobile -->
+
         <button id="hamburgerBTN"><i class="fa-solid fa-bars"></i></button>
-      
-        <!-- Hamburger Menu -->
         <nav class="hamburgerMenu lato-regular">
           <button id="hamburgerClose"><i class="fa-solid fa-x"></i></button>
           <a href="#aboutMe" data-translate="aboutMe">About Me</a>
           <a href="#myProjects" data-translate="myProjects">My Projects</a>
           <a href="#contact" data-translate="contact">Contact</a>
-      
-          <!-- Language Buttons in Hamburger Menu -->
           <div class="language-section">
             <button class="language-btn" data-lang="en"><img src="img/nl.svg" alt="Dutch"></button>
             <button class="language-btn" data-lang="nl"><img src="img/uk.svg" alt="English"></button>
           </div>
         </nav>
+
       </div>
     </header>
 
@@ -212,57 +206,48 @@
 
 
 
- // Initialize an object to hold the translations
-let translations = {};
+  let translations = {};
 
-// Load translations from a JSON file
-async function loadTranslations() {
-  const response = await fetch('translations/translations.json');
-  translations = await response.json();
-}
 
-// Function to change language
-function changeLanguage(language) {
-  // Update the text content based on the selected language
-  document.querySelectorAll("[data-translate]").forEach(element => {
-    const key = element.getAttribute("data-translate");
-    element.textContent = translations[language][key];
-  });
+  async function loadTranslations() {
+    const response = await fetch('translations/translations.json');
+    translations = await response.json();
+  }
 
-  // Update the active language button across both menus
-  document.querySelectorAll('.language-btn').forEach(btn => {
-    btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
-  });
-}
-
-// Load translations when the page loads
-window.onload = async () => {
-  await loadTranslations();
-
-  // Default language is English
-  let currentLanguage = "en";
-  changeLanguage(currentLanguage);
-
-  // Event listener for language buttons
-  document.querySelectorAll('.language-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const selectedLanguage = btn.getAttribute('data-lang');
-      if (selectedLanguage !== currentLanguage) {
-        currentLanguage = selectedLanguage;
-        changeLanguage(currentLanguage);
-      }
+  function changeLanguage(language) {
+    document.querySelectorAll("[data-translate]").forEach(element => {
+      const key = element.getAttribute("data-translate");
+      element.textContent = translations[language][key];
     });
-  });
-  
-  // Hamburger menu toggle logic
-  document.getElementById("hamburgerBTN").addEventListener("click", function() {
-    document.querySelector(".hamburgerMenu").style.display = "flex";
-  });
+    document.querySelectorAll('.language-btn').forEach(btn => {
+      btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
+    });
+  }
 
-  document.getElementById("hamburgerClose").addEventListener("click", function() {
-    document.querySelector(".hamburgerMenu").style.display = "none";
-  });
-};
+  window.onload = async () => {
+    await loadTranslations();
+
+    let currentLanguage = "en";
+    changeLanguage(currentLanguage);
+
+    document.querySelectorAll('.language-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const selectedLanguage = btn.getAttribute('data-lang');
+        if (selectedLanguage !== currentLanguage) {
+          currentLanguage = selectedLanguage;
+          changeLanguage(currentLanguage);
+        }
+      });
+    });
+    
+    document.getElementById("hamburgerBTN").addEventListener("click", function() {
+      document.querySelector(".hamburgerMenu").style.display = "flex";
+    });
+
+    document.getElementById("hamburgerClose").addEventListener("click", function() {
+      document.querySelector(".hamburgerMenu").style.display = "none";
+    });
+  };
 
 
 
