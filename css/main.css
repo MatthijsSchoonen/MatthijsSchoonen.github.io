@@ -289,6 +289,7 @@ i {
 }
 
 .contactContainer{
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -345,4 +346,146 @@ nav a.active{
 
 #lang-en.active, #lang-nl.active{
   display: block;
+}
+
+
+/* //////////////////////////////// */
+
+#hamburgerBTN{
+  display: none;
+}
+.hamburgerMenu{
+  display: none;
+}
+
+
+@media (max-width: 1024px){
+  .title{
+    font-size: 3.5vh;
+  }
+  .nav a{
+    font-size: 2vh;
+  }
+
+  .nav{
+    width: 40vw;
+  }
+
+  #introText{
+    font-size: 2.5vh;
+  }
+
+  #aboutMeText{
+    width: 35vw;
+    font-size: 2vh;
+  }
+
+  .project img{
+    max-width: 30vw;
+    object-fit: cover;
+  }
+  
+  .SBImg{
+    object-position:  calc(0% + -10vw) center;
+  }
+}
+
+
+.hamburgerMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3d0000;
+  z-index: 1000;
+}
+
+.hamburgerMenu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+#hamburgerBTN {
+  display: none; 
+  font-size: 2rem;
+  z-index: 11;
+}
+
+#hamburgerBTN i:hover{
+  color: #240000;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; 
+  }
+
+  #hamburgerBTN {
+    display: block;
+  }
+  .hamburgerMenu{
+    flex-direction: column;
+    text-align: center;
+    font-size: 2vh;
+  }
+  #hamburgerClose{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+  }
+  #hamburgerClose i:hover{
+    color: #240000;
+  }
+
+  .hamburgerMenu a:hover{
+    color: #ff0000;
+  }
+
+  #intro{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #intro div{
+    margin-top: 11vh;
+    width: 100%;
+  }
+
+  #introText{
+    width: 60vw;
+  }
+
+  .introImg{
+    margin: 2vh;
+    width: 80vw;
+    border-radius: 5vh;
+  }
+
+  .aboutMeContainer{
+    flex-direction: column;
+  }
+  #aboutMeText{
+    width: 80vw;
+    margin-top: 3vh;
+  }
+
+  .project{
+    flex-direction: column;
+  }
+
+  .project img{
+    max-width: 60vw;
+    max-height: 30vh;
+  }
+
+  .projectTextContainer{
+    width: 60vw
+  }
+
+  #jumpGame, #crossroadOfCrime{
+    width: 60vw;
+  }
 }

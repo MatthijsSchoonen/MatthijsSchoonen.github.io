@@ -27,7 +27,15 @@
             <button id="lang-en" class="language-btn"><img src="img/uk.svg"></button>
             <button id="lang-nl" class="language-btn"><img src="img/nl.svg"></button>
           </nav>
-      
+          <button id="hamburgerBTN"><i class="fa-solid fa-bars"></i></button>
+          <nav class="hamburgerMenu lato-regular">
+            <button id="hamburgerClose"><i class="fa-solid fa-x"></i></button>
+            <a href="#aboutMe" id="aboutMeLink" data-translate="aboutMe">About Me</a>
+            <a href="#myProjects" id="myProjectsLink" data-translate="myProjects">My Projects</a>
+            <a href="#contact" id="contactLink" data-translate="contact">Contact</a>
+            <button id="lang-en" class="language-btn"><img src="img/uk.svg"></button>
+            <button id="lang-nl" class="language-btn"><img src="img/nl.svg"></button>
+          </nav>
       </div>
     </header>
 
@@ -45,7 +53,7 @@
 
     <section id="aboutMe">
       <div>
-        <p id="aboutMeTitle" class="Oswald" ata-translate="aboutMe">About Me</p>
+        <p id="aboutMeTitle" class="Oswald" data-translate="aboutMe">About Me</p>
         <div class="aboutMeContainer">      
           <img class="me" src="img/me.jpg">
           <p id="aboutMeText" class="lato-regular" data-translate="aboutMeText">Mijn naam is Matthijs Schoonen en ik ben 18 jaar oud. Ik zit in het derde jaar van de opleiding Software Developer. Mijn passie voor technologie en programmeren motiveert mij om door te leren en mezelf te ontwikkelen. Momenteel werk ik bij Innovend, waar ik de kans krijg om mijn vaardigheden in de praktijk toe te passen en te groeien in een professionele omgeving. In mijn vrije tijd Werk ik aan eigen projecten en bouw ik af en toe computers</p>
@@ -110,6 +118,7 @@
         <div class="contactContainer lato-regular">
           <a href="https://github.com/MatthijsSchoonen/"><i class="fa-brands fa-github"></i> MatthijsSchoonen</a>
           <a href="https://www.instagram.com/matthijs_schoonen/"><i class="fa-brands fa-instagram"></i> matthijs_schoonen</a>
+          <a href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-linkedin"></i> Matthijs Schoonen</a>
           <a href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i> schoonenmatthijs@gmail.com</a>
           <a href="tel:+31615458125"><i class="fa-solid fa-phone"></i> +31 6 15458125</a>
         </div>
@@ -229,6 +238,14 @@
     document.getElementById('lang-en').addEventListener('click', () => changeLanguage('nl'));
     document.getElementById('lang-nl').addEventListener('click', () => changeLanguage('en'));
   };
+
+  document.getElementById("hamburgerBTN").addEventListener("click", function() {
+  document.querySelector(".hamburgerMenu").style.display = "flex";
+});
+
+document.getElementById("hamburgerClose").addEventListener("click", function() {
+  document.querySelector(".hamburgerMenu").style.display = "none";
+});
 
 
 </script>
