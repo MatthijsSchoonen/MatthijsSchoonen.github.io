@@ -223,7 +223,7 @@ section {
 }
 
 #jumpGame,
-#crossroadOfCrime {
+#LatchPoint {
   font-size: 3vh;
   width: 30vw;
   text-align: center;
@@ -490,7 +490,7 @@ nav a.active{
     width: 60vw
   }
 
-  #jumpGame, #crossroadOfCrime{
+  #jumpGame, #Latchpoint{
     width: 60vw;
   }
   .footerContainer{
