@@ -256,14 +256,21 @@
   }
 
   function changeLanguage(language) {
-    document.querySelectorAll("[data-translate]").forEach(element => {
-      const key = element.getAttribute("data-translate");
-      element.textContent = translations[language][key];
-    });
-    document.querySelectorAll('.language-btn').forEach(btn => {
-      btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
-    });
-  }
+  document.querySelectorAll("[data-translate]").forEach(element => {
+    const key = element.getAttribute("data-translate");
+    element.textContent = translations[language][key];
+  });
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    const parentNav = btn.closest('nav'); // Get the closest navigation container
+    if (parentNav) {
+      parentNav.querySelectorAll('.language-btn').forEach(innerBtn => {
+        innerBtn.style.display = innerBtn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
+      });
+    }
+  });
+}
+
 
   window.onload = async () => {
     await loadTranslations();
