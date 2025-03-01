@@ -507,6 +507,10 @@ nav a.active{
   }
   .contactContainers{
     flex-direction: column;
+    width: 80vw;
+  }
+  .contactContainer, .contactTextContainer{
+    max-width: 80vw ;
   }
 
   #aboutMeText{
