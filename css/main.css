@@ -1,5 +1,81 @@
+@font-face {
+  font-family: 'BahnSchrift';
+  src: url(fonts/BahnSchrift.ttf) format('truetype');
+}
+
 * {
+  font-family: 'BahnSchrift';
   margin: 0;
   padding: 0;
-  
+}
+
+
+header{
+  width: 100vw;
+  color: #ffffff;
+  background-color: transparent;
+  position: fixed;
+  top: 3vh;
+}
+
+.headerContainer{
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  background-color: #000000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35vw;
+  border-radius: 25vw;
+}
+
+.whiteBubble{
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.25vw;
+  width: 1.75vw;
+  height: 1.75vw;
+}
+
+.RedText{
+  color: #f44242;
+}
+
+.titleContainer{
+  display: flex;
+  align-items: center;
+  gap: 0.2vw;
+  font-size: 1.5rem;
+}
+
+.titleContainer .RedText{
+  font-weight: 1000;
+  font-size: 2rem;
+}
+
+.contactBubble{
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 25vw;
+  padding: 0.5vw 0.75vw;
+}
+
+.contactBubble a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.navContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
