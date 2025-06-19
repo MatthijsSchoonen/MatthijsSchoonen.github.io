@@ -11,6 +11,7 @@
 
 main{
   max-width: 100VW;
+  background-color: #e1e1e1;
 }
 
 
@@ -172,5 +173,30 @@ section{
   top: 0;
   left: 0;
   transform: scale(1.1);
+}
+
+/* about */
+
+.about{
+  display: flex ;
+  flex-direction: column;
+}
+
+.blob{
+  background-color: #f4f4f4;
+  border-bottom: 1vw solid #e1e1e1;
+  box-shadow: 0 1vw  #d1d1d1;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 0 0 5vw 5vw ;
+}
+
+.aboutContainer{
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35vw;
 }
 
