@@ -702,3 +702,27 @@ button{
   font-weight: 200;
   font-size: 1.8rem;
 }
+
+footer{
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  color: #ffffff;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContainer{
+  margin: 0 auto;
+  pad: 2vh 0;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerContainer a{
+  text-decoration: underline;
+}
