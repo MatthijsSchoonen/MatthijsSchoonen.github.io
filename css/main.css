@@ -359,6 +359,8 @@ button{
   text-align: center;
 }
 
+
+
 .skillsTitleContainer a {
   position: absolute;
   right: 0;
@@ -479,10 +481,23 @@ button{
   text-align: center;
 }
 
+.projectTitleContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 60vw;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
 .projectsContainer{
   width: 60vw;
   margin: 0 auto;
   padding: 5vh 0;
+}
+
+.projectTitle{
+  font-size: 3rem;
 }
 
 .projectCard{
@@ -766,4 +781,66 @@ footer{
 
 .f2{
   font-size: 2rem;
+}
+
+
+/* Responsive Design */
+
+@media (height <= 1080px) {
+  .whiteborder{
+    font-size: 1.4rem;
+  }
+  .blob{
+     top : -13vh;
+  }
+}
+
+@media(height <= 720px){
+  .introMainText{
+    font-size: 3rem;
+  }
+  .IntroSecondairyText{
+    width: 80%;
+  }
+  .subject{
+    font-size: 1.5rem;
+  }
+  .title{
+    font-size: 3rem;
+  }
+  .contentText{
+    font-size: 1.3rem;
+  }
+  .whiteborder{
+    font-size: 1rem;
+  }
+  .skillCard{
+    gap: 0.5vh;
+  }
+  .skillDescription{
+    font-size: 0.7rem;
+  }
+  .contactContainer{
+    width: 80vw;
+  }
+  .titleContainer p{
+    font-size: 2rem;
+  }
+  .BlackBubble{
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  .whiteBubble{
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  .whiteborder{
+    height: 2.5vw;
+  }
+  .contactTitle{
+    font-size: 2.5rem;
+  }
+  .contactTitleContainer{
+    width: 80vw;
+  }
 }
