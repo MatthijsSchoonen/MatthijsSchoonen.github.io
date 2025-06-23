@@ -48,15 +48,20 @@
       </div>
 
       <div class="navContainer">
-        <a href="#intro">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#intro" data-translate="Home">Home</a>
+        <a href="#about" data-translate="About">About</a>
+        <a href="#skills" data-translate="skills">Skills</a>
+        <a href="#projects" data-translate="Projects">Projects</a>
       </div>
 
-      <div class="contactBubble">
-        <a href="#contact">Contact me</a>
+      <div class="headerRightContainer">
+        <button class="language-btn" data-lang="en"><img class="translateImg" src="img/nl.svg" alt="Dutch"></button>
+        <button class="language-btn" data-lang="nl"><img class="translateImg" src="img/uk.svg" alt="English"></button>
+          <div class="contactBubble">
+            <a href="#contact" data-translate="ContactMe">Contact me</a>
+          </div>
       </div>
+      
 
     </div>
   </header>
@@ -70,8 +75,8 @@
     <section class="intro" id="intro">
       <div class="introContainer">
         <div class="introTextContainer">
-          <p class="introMainText">I'm<span class="RedText"> Matthijs Schoonen,</span><br/>a 4rd-year student<br/>Software Developer</p>
-          <p class="IntroSecondairyText">Welcome to my portfolio! Explore my journey as a software developer, discover my skills, and check out the projects I've worked on. Scroll down to learn more about me and what I can do.</p>
+          <div class="introMainText"><p><span data-translate="Iam">I'm</span><span class="RedText"> Matthijs Schoonen,</span></p><p data-translate="yearStudent">a 4th-year student</p><p>Software Developer</p></div>
+          <p class="IntroSecondairyText" data-translate="IntroSecondairyText">Welcome to my portfolio! Explore my journey as a software developer, discover my skills, and check out the projects I've worked on. Scroll down to learn more about me and what I can do.</p>
         </div>
 
         <div class="profileWrapper">
@@ -96,15 +101,15 @@
            </div>
 
            <div class="aboutTextContainer">
-            <p class="RedText subject">-About</p>
-            <p class="Title">About <span class="RedText">Matthijs Schoonen</span></p>
-            <p class="contentText">I'm a fourth year Software Developer student. Driven by a passion for technology and programming, I’m always eager to learn and grow. Currently, I work at Innovend, where I apply my skills in a professional setting. In my spare time, I enjoy working on personal projects and building computers.</p>
+            <p class="RedText subject" data-translate="About1">-About</p>
+            <p class="Title"><span data-translate="About2">about</span> <span class="RedText">Matthijs Schoonen</span></p>
+            <p class="contentText" data-translate="AbouteMe">I'm a fourth year Software Developer student. Driven by a passion for technology and programming, I’m always eager to learn and grow. Currently, I work at Innovend, where I apply my skills in a professional setting. In my spare time, I enjoy working on personal projects and building computers.</p>
             <div class="aboutInfo">
-              <p class="subject"><Span class="RedText fontsize3">19</Span><br/>Years old</p>
-              <p class="subject"><Span class="RedText fontsize3">Fourth</Span><br/>Year student</p>
-              <p class="subject"><Span class="RedText fontsize3">Oud Gastel</Span><br/>Hometown</p>
+              <p class="subject"><Span class="RedText fontsize3">19</Span><br/><span data-translate="YearsOld">Years Old</span></p>
+              <p class="subject"><Span class="RedText fontsize3" data-translate="Fourth">Fourth</Span><br/><span data-translate="YearStudent">Year student</span></p>
+              <p class="subject"><Span class="RedText fontsize3">Oud Gastel</Span><br/><span data-translate="HomeTown">HomeTown</span></p>
             </div>
-            <button class="RedBorder"><p class="whiteborder">Navigate to CV </p><Span class="RedText"><i class="fa-solid fa-arrow-right  whiteBubble"></i></Span></button>
+            <button class="RedBorder"><p class="whiteborder" data-translate="cv">Navigate to CV </p><Span class="RedText"><i class="fa-solid fa-arrow-right  whiteBubble"></i></Span></button>
 
            </div>
         
@@ -116,11 +121,11 @@
     <section class="whitebackground" id="skills">
         <div class="skillsContainer">
           <div class="subjectContainer">
-            <p class="RedText subject">-Skills</p>
+            <p class="RedText subject" data-translate="skills1">-Skills</p>
             <div class="skillsTitleContainer">
-              <a class="transparent">View all Skills <i class="fa-solid fa-arrow-right"></i></a>
-              <p class="Title">My Skills</p>
-              <a class="RedText f2">View all Skills <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="transparent" ><span data-translate="viewAllSkills">View all Skills </span> <i class="fa-solid fa-arrow-right"></i></a>
+              <p class="Title" data-translate="mySkills">My Skills</p>
+              <a class="RedText f2" ><span data-translate="viewAllSkills">View all Skills </span> <i class="fa-solid fa-arrow-right"></i></a>
             </div>
               
           </div>
@@ -133,7 +138,7 @@
 
               <img class="redPlaceholder" src="img/CSharp.png"  />
               <p class="skillTitle">C# / .NET</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="CSharpSkill">
                 3 years of C# experience across WinUI, ASP.NET, and console apps. Learned WinUI through school and personal projects; worked on APIs and web apps with ASP.NET during internship and work. Focused on practical, real-world development.
               </p>
               <div class="progressContainer">
@@ -151,7 +156,7 @@
 
               <img class="redPlaceholder" src="img/JavaScript.png" />
               <p class="skillTitle">JavaScript</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="javaScriptSkill">
                 1.5 years of JavaScript experience through personal and internship projects. Built interactive apps using vanilla JS, Vue, and Ionic. Gained hands-on experience during internship, deepening skills in front-end development and real-world project work.
               </p>
               <div class="progressContainer">
@@ -168,7 +173,7 @@
 
               <img class="redPlaceholder" src="img/unity.png" />
               <p class="skillTitle">Unity</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="UnitySkill">
                 2 years of Unity experience through personal projects. Built interactive 2D and 3D games, focusing on gameplay mechanics, UI, and scripting with C#. Gained strong understanding of the Unity editor and engine features through hands-on development.
               </p>
               <div class="progressContainer">
@@ -186,7 +191,7 @@
 
               <img class="redPlaceholder" src="img/HTMLCSS.png" />
               <p class="skillTitle">HTML/CSS</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="htmlcssSkill">
                 3 years of HTML and CSS experience across school, personal, and work projects. Built responsive layouts, styled components, and crafted user-friendly interfaces. Comfortable with modern techniques like Flexbox, Grid, and media queries.
               </p>
               <div class="progressContainer">
@@ -203,7 +208,7 @@
 
               <img class="redPlaceholder" src="img/sql.png" />
               <p class="skillTitle">SQL</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="sqlSkill">
                 2.5 years of SQL experience through work and personal projects. Used for basic CRUD operations to interact with relational databases. Familiar with essential query building in real-world use cases.
               </p>
               <div class="progressContainer">
@@ -220,7 +225,7 @@
 
               <img class="redPlaceholder" src="img/php.svg" />
               <p class="skillTitle">PHP</p>
-              <p class="skillDescription">
+              <p class="skillDescription" data-translate="phpSkill">
                 1.5 years of PHP experience through school and a few personal projects. Gained basic understanding of backend development and used Laravel for structured web apps. Comfortable with core PHP syntax and simple dynamic functionality.
               </p>
               <div class="progressContainer">
@@ -243,10 +248,10 @@
     <section class="projectsSection" id="projects">
       <div class="projectsContainer">
         <div>
-          <p class="RedText subject">-Projects</p>
+          <p class="RedText subject" data-translate="projects1">-Projects</p>
           <div class="skillsTitleContainer">
-            <p class="Title">My Latest Projects</p>
-            <a class="RedText f2">View all Projects <i class="fa-solid fa-arrow-right"></i></a>
+            <p class="Title" data-translate="MylatestProjects">My Latest Projects</p>
+            <a class="RedText f2"><span data-translate="viewAllProjects">View all Projects</span> <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
@@ -258,7 +263,7 @@
                   <p class="skillBadge">JavaScript</p><p class="skillBadge">Ionic</p><p class="skillBadge">vue</p>
                </div>
                <div class="projectDescriptionContainer">
-                <p class="projectDescription">Game Score Central: the hybrid mobile app to keep track of your scores during a game</p>
+                <p class="projectDescription" data-translate="GameScoreCentral">Game Score Central: the hybrid mobile app to keep track of your scores during a game</p>
                 <a class="redBubble disabled" data-tooltip="Disabled: Project not ready for release"><i class="fa-solid fa-arrow-right"></i></a>
                </div>          
             </div>
@@ -269,7 +274,7 @@
                   <p class="skillBadge">C#</p><p class="skillBadge">.NET</p><p class="skillBadge">Xaml</p>
                 </div>
                 <div class="projectDescriptionContainer">
-                  <p class="projectDescription">
+                  <p class="projectDescription" data-translate="pizzeria">
                     Pizzeria: an application I built to showcase my C# skills, designed for use in a pizzeria by both customers and employees.
                   </p>
                   <a class="redBubble" href="https://github.com/MatthijsSchoonen/WinUI-ASP.NET-Basics" download data-tooltip="Navigate to the github repository"><i class="fa-solid fa-arrow-right"></i></a>
@@ -283,7 +288,7 @@
                   <p class="skillBadge">C#</p><p class="skillBadge">Unity</p>
                 </div>
                 <div class="projectDescriptionContainer">
-                  <p class="projectDescription">LatchPoint: a 3D first-person puzzle game with logic challenges and interactive mechanics.</p>
+                  <p class="projectDescription" data-translate="latchpoint">LatchPoint: a 3D first-person puzzle game with logic challenges and interactive mechanics.</p>
                   <a class="redBubble" href="projects/latchpoint_Demo.zip" download data-tooltip="Downloads the zip to play a demo"><i class="fa-solid fa-arrow-right"></i></a>
                </div>          
             </div>
@@ -294,7 +299,7 @@
                   <p class="skillBadge">JavaScript</p><p class="skillBadge">Kaboom.js</p>
                </div>
                <div class="projectDescriptionContainer">
-                <p class="projectDescription">Game Portfolio: a simple 2D game that functions as a portfolio website.</p>
+                <p class="projectDescription" data-translate="GamePortfolio">Game Portfolio: a simple 2D game that functions as a portfolio website.</p>
                 <a class="redBubble" href="portfolio" data-tooltip="Navigate to a different web page"><i class="fa-solid fa-arrow-right"></i></a>
                </div>          
             </div>
@@ -305,7 +310,7 @@
 
     <!-- seperator -->
     <div class="seperator">
-        <p>More projects coming soon!</p>
+        <p data-translate="MoreProjectsComingSoon">More projects coming soon!</p>
     </div>
      <!-- Contact Section -->
 
@@ -313,7 +318,7 @@
      <section class="contactSection" id="contact">
       <div class="contactContainer">
         <div class="contactTitleContainer">
-          <p class="contactTitle">Lets's Keep Contact</p>
+          <p class="contactTitle" data-translate="letsKeepInTouch">Lets's Keep Contact</p>
           <button class="blackBorder"><p class="whiteborder">Navigate to CV </p><Span class="blackText"><i class="fa-solid fa-arrow-right  whiteBubble"></i></Span></button>
         </div>
         <div class="line"></div>
@@ -322,7 +327,7 @@
             <div class="titleContainer">
               <p class="RedText BlackBubble">M</p><p class="boldName">Matthijs</p>
             </div>
-            <p class="contactText">
+            <p class="contactText" data-translate="ContactText">
               You can contact me if you have any questions, need an application, or want to offer me a job.
               I am always open to discussing new projects, freelance opportunities, or collaborations. Whether you have a specific idea in mind or just want to connect, feel free to reach out. I look forward to hearing from you and exploring how we can work together to achieve your goals.
             </p>
@@ -336,10 +341,10 @@
 
           <div class="m1">
             <p class="RedText boldName">Navigation</p>
-            <a href="#intro">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#intro" data-translate="Home">Home</a>
+            <a href="#about" data-translate="About">About</a>
+            <a href="#skills" data-translate="skills">Skills</a>
+            <a href="#projects" data-translate="Projects">Projects</a>
           </div>
 
           <div class="m1">
@@ -357,9 +362,15 @@
 
   <footer>
     <div class="footerContainer">
-      <a href="#intro"><i class="fa-solid fa-arrow-up"></i> back to top</a>
-      <p><i class="fa-regular fa-copyright"></i> <span id="year"></span> Matthijs Schoonen</p>
-      <p>Made in collaboration with graphic designer Sietse Bolders</p>
+      <div class="left">
+        <a href="#intro"><i class="fa-solid fa-arrow-up"></i> <span data-translate="backtoTop">to top</span></a>
+      </div>
+      <div class="center">
+        <p><i class="fa-regular fa-copyright"></i> <span id="year"></span> Matthijs Schoonen</p>
+      </div>
+      <div class="right">
+        <p data-translate="inCollaborationWith">Made in collaboration with graphic designer Sietse Bolders</p>
+      </div>
     </div>
   </footer>
 
@@ -380,4 +391,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+let translations = {};
+
+async function loadTranslations() {
+  const response = await fetch('translations/translations.json');
+  translations = await response.json();
+}
+
+function changeLanguage(language) {
+  document.querySelectorAll("[data-translate]").forEach(element => {
+    const key = element.getAttribute("data-translate");
+    if (translations[language] && translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
+  });
+}
+
+window.onload = async () => {
+  await loadTranslations();
+
+  let currentLanguage = "en";
+  changeLanguage(currentLanguage);
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selectedLanguage = btn.getAttribute('data-lang');
+      if (selectedLanguage !== currentLanguage) {
+        currentLanguage = selectedLanguage;
+        changeLanguage(currentLanguage);
+      }
+    });
+  });
+}
+
+
 </script>

@@ -91,6 +91,16 @@ header{
   text-decoration: none;
   font-size: 1.1rem;
 }
+
+
+.translateImg{
+  height: 2vw;
+}
+
+.headerRightContainer{
+  display: flex;
+  gap: 1vw;
+}
 /* intro */
 
 section{
@@ -715,19 +725,25 @@ footer{
   justify-content: center;
 }
 
-.footerContainer{
+.footerContainer {
   margin: 0 auto;
-  pad: 2vh 0;
+  padding: 2vh 0;
   width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
-.footerContainer a{
-  text-decoration: underline;
+.footerContainer .center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.f2{
-  font-size: 1.5rem;
+.footerContainer .left,
+.footerContainer .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
