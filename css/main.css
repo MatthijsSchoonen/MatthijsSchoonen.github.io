@@ -726,3 +726,7 @@ footer{
 .footerContainer a{
   text-decoration: underline;
 }
+
+.f2{
+  font-size: 1.5rem;
+}
