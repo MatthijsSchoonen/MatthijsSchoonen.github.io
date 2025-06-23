@@ -11,6 +11,7 @@
 
 a{
   text-decoration: none;
+  color: #ffffff;
 }
 
 main{
@@ -575,4 +576,129 @@ button{
 
 .projectsSection{
   height: auto;
+}
+
+
+/*  seperator  */
+.seperator{
+  width: 100%;
+  height: 4vw;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+
+/* Contact */
+
+.blackBorder{
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: 0.5vw;
+  border: 0.2vw solid #000000;
+  background-color: #000000;
+  padding: 0.1vw;
+  border-radius: 25vw;
+  margin: 2vh 0;
+}
+
+.blackText{
+  color: #000000;
+}
+
+.BlackBubble{
+  background-color: #000000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.25vw;
+  width: 1.75vw;
+  height: 1.75vw;
+}
+
+.contactSection{
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.contactContainer{
+  width: 60vw;
+  margin: 0 auto;
+  padding: 5vh 0;
+}
+
+.line{
+  background-color: #ebebeb;
+  height: 0.2vh;
+  width: 100%;
+}
+
+.contactTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.contactTitle{
+  font-size: 4rem;
+  font-weight: 375;
+}
+
+.contactInfoContainer{
+  margin: 2vh 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contactTextContainer{
+  width: 40%;
+}
+
+.contactTextContainer p{
+  margin: 1vh 0;
+}
+
+.socialsContainer{
+  display: flex;
+  gap: 1vw;
+  margin: 1vh 0;
+}
+
+.socialsContainer a{
+  font-size: 2vh;
+}
+
+.boldName{
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.contactText{
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.m1{
+  margin: 1vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.m1 a{
+  color: #000000;
+  font-weight: 200;
+  font-size: 1.8rem;
 }
