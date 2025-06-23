@@ -125,6 +125,7 @@ section{
 
 .IntroSecondairyText{
   font-size: 1.5rem;
+  width: 60%;
 }
 
 .profileWrapper {
@@ -394,7 +395,7 @@ button{
 }
 
 .skillDescription {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -717,7 +718,7 @@ footer{
 .footerContainer{
   margin: 0 auto;
   pad: 2vh 0;
-  width: 80vw;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
