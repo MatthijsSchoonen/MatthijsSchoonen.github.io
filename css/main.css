@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 main{
   max-width: 100VW;
   background-color: #e1e1e1;
@@ -330,9 +334,11 @@ button{
 }
 
 .skillsTitleContainer{
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 60vw;
 }
 
 
@@ -443,3 +449,130 @@ button{
   justify-content: center;
 }
 
+/* projects */
+
+.projectsContainer{
+  width: 60vw;
+  margin: 0 auto;
+  padding: 5vh 0;
+}
+
+.projectCard{
+  width: 27vw;
+  background-color: #ffffff;
+  padding: 0.5vw;
+  border-radius: 1.25vw;
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.ProjectImg{
+  width: 27vw;
+  height: 26vw;
+  background-color: #d1d1d1;
+  border-radius: 1vw 1vw 0 0;
+}
+.cover{
+  object-fit: cover;
+}
+
+.skillBadgeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5vw;
+  margin-top: 1vw; 
+}
+
+.skillBadge{
+  background: #000000;
+  color: #ffffff;
+  padding: 0.5vw 1vw;
+  border-radius: 1vw;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.projectDescriptionContainer{
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+}
+
+.redBubble{
+  background-color: #f44242;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.25vw;
+  width: 1.75vw;
+  height: 1.75vw;
+  color: #ffffff;
+}
+
+.redBubble:hover{
+  background-color: #f4bfbf;
+  cursor: pointer;
+}
+
+.disabled{
+  background-color: #f4bfbf;
+}
+
+
+.projectDescription{
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+
+
+.redBubble.disabled {
+  position: relative;
+  cursor: not-allowed;
+}
+
+.redBubble::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: #fff;
+  padding: 0.2vw 0.5vw;
+  border-radius: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 0.75vw;
+  z-index: 10;
+}
+
+.redBubble:hover::after {
+  opacity: 1;
+}
+
+.projectCardGrid{
+  margin: 0 auto;
+  margin-top: 3vh;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  column-gap: 5vw;
+  row-gap: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.projectsSection{
+  height: auto;
+}
