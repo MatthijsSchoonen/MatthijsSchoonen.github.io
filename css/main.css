@@ -345,13 +345,25 @@ button{
   color: transparent;
 }
 
-.skillsTitleContainer{
+.skillsTitleContainer {
+  position: relative;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 60vw;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
+
+.skillsTitleContainer .Title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.skillsTitleContainer a {
+  position: absolute;
+  right: 0;
+}
+
 
 
 .redPlaceholder{
@@ -462,6 +474,10 @@ button{
 }
 
 /* projects */
+
+.center{
+  text-align: center;
+}
 
 .projectsContainer{
   width: 60vw;
@@ -746,4 +762,8 @@ footer{
   flex: 1;
   display: flex;
   justify-content: center;
+}
+
+.f2{
+  font-size: 2rem;
 }
