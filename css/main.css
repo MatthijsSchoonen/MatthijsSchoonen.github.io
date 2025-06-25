@@ -844,3 +844,155 @@ footer{
     width: 80vw;
   }
 }
+
+@media(width <= 425px){
+  .headerContainer{
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  /* intro */
+
+  .intro{
+    height: auto;
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .introContainer {
+    width: 90vw;
+    flex-direction: column-reverse;
+    margin: 0;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .introMainText{
+    font-size: 2rem;
+    width: 90vw;
+    margin: 0;
+    text-align: center;
+  }
+  .IntroSecondairyText{
+    font-size: 1.2rem;
+    width: 90vw;
+    margin: 0;
+    text-align: center;
+  }
+
+  .introTextContainer {
+    width: 90vw;
+    margin: 0;
+  }
+
+  .profileWrapper{
+    margin: 10vh  auto;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .blob{
+    display: none;
+  }
+  
+  /* about */
+
+  #about{
+    height: auto;
+  }
+  .about{
+    height: auto;
+    padding: 5vh 0;
+    width: 100vw;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .aboutContainer{
+    width: 90vw;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .aboutTextContainer{
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    text-align: center;
+  }
+ 
+  .contentText{
+    font-size: 1.2rem;
+  }
+
+  .aboutInfo {
+    flex-direction: column;
+  }
+
+  .title{
+    font-size: 2rem;
+    width: 90vw;
+  }
+  .subject{
+    font-size: 1.8rem;
+    width: 90vw;
+  }
+
+  .fontsize3{
+    font-size: 1.5rem;
+  }
+
+  .RedBorder{
+    width: 67vw;
+    height: 5vh;
+    margin-left: 10vw;
+  }
+  .whiteborder{
+    width: 50vw;
+    height: 3.8vh;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
+  .whiteBubble{
+    width: 3.8vh;
+    height: 3.8vh;
+    margin-right: 1vw;
+  }
+
+  .contentText{
+    font-size: 1.2rem;
+    width: 90vw;
+  }
+
+  /*skills*/
+  .skillsContainer{
+    width: 90vw;
+    padding-top: 5vh;
+  }
+
+  .skillsTitleContainer{
+    width: 90vw;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .contactInfoContainer{
+    flex-direction: column;
+  }
+
+
+ 
+
+  .m1 a{
+    font-size: 0.8rem;
+  }
+
+
+}
