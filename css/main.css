@@ -9,6 +9,17 @@
   padding: 0;
 }
 
+html, body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 a{
   text-decoration: none;
   color: #ffffff;
@@ -512,7 +523,7 @@ button{
 }
 
 .ProjectImg{
-  width: 27vw;
+  width: 26vw;
   height: 26vw;
   background-color: #d1d1d1;
   border-radius: 1vw 1vw 0 0;
@@ -779,6 +790,12 @@ footer{
   justify-content: center;
 }
 
+.contactLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh
+}
+
 .f2{
   font-size: 2rem;
 }
@@ -795,7 +812,7 @@ footer{
   }
 }
 
-@media(height <= 720px){
+@media(width <= 720px){
   .introMainText{
     font-size: 3rem;
   }
@@ -845,10 +862,25 @@ footer{
   }
 }
 
-@media(width <= 425px){
-  .headerContainer{
+@media(width <= 450px){
+   .headerContainer {
     width: 90vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1vh;
     flex-direction: column;
+  }
+  .translateImg{
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .headerRightContainer{
+    gap: 3vw;
   }
 
   /* intro */
@@ -900,11 +932,13 @@ footer{
 
   #about{
     height: auto;
+    max-width: 100vw;
   }
   .about{
     height: auto;
     padding: 5vh 0;
-    width: 100vw;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .hide{
@@ -972,7 +1006,7 @@ footer{
   /*skills*/
   .skillsContainer{
     width: 90vw;
-    padding-top: 5vh;
+    padding-top: 0;
   }
 
   .skillsTitleContainer{
@@ -983,16 +1017,160 @@ footer{
     height: auto;
   }
 
-  .contactInfoContainer{
-    flex-direction: column;
+  .skillsCardGrid{
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    width: 90vw;
+    margin: 5vh 0;
   }
 
+  .skillCard{
+    width: 100%;
+    height: auto;
+  }
 
+  .redPlaceholder{
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .progressContainer{
+    width: 100%;
+  }
+
+  .progressbar{
+    width: 100%;
+  }
+   
+  .whitebackground{
+    height: auto;
+    padding: 5vh 0;
+  }
+
+  .f2{
+    width: 100%;
+  }
+
+  /*project */
+
+  .projectsSection{
+    height: auto;
+  }
+
+  .projectsContainer{
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .projectTitleContainer{
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .projectCardGrid{
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    width: 90vw;
+  }
+
+  .projectCard{
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+  }
+  
+  .ProjectImg{
+    height: auto;
+    width: 99%;
+    margin: 0 auto;
+  }
+
+  .redBubble{
+    width: 10vw;
+    height: 10vw;
+  }
+
+  /* contact */
+
+  .contactSection{
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .contactContainer{
+    width: 90vw;  
+  }
+
+  .contactTitleContainer{
+     flex-direction: column;
+     width: 100%;
+  }
+
+  .contactTitle{
+    text-align: center;
+  }
+
+  .contactInfoContainer{
+    width: 90vw;
+    flex-direction: column;
+  }
+  
+  .contactTextContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .BlackBubble{
+    height: 10vw;
+    width: 10vw;
+  }
+  .contactLinks{
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 1vw;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .m1{
+    text-align: center;
+  }
+  
  
 
   .m1 a{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
+
+  .footerContainer{
+    width: 90vw;
+    font-size: 0.7rem;
+  }
+
+  .seperator{
+    width: 100%;
+  }
+
+  footer{
+    max-width: 100vw;
+  }
+
+  .line{
+    width: 100%;
+  }
+  
 
 
 }
+
+@media(width <= 375px){
+  .footerContainer{
+    padding: 0;
+    margin: 0;
+  }
+}
+
