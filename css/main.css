@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'BahnSchrift';
-  src: url(https://github.com/MatthijsSchoonen/MatthijsSchoonen.github.io/blob/main/fonts/BAHNSCHRIFT.TTF) format('truetype');
+  src: url(../fonts/BahnSchrift.ttf) format('truetype');
 }
 
 * {
