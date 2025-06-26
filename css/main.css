@@ -801,6 +801,20 @@ footer{
 }
 
 
+/* under construction*/
+
+.underconstruction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.underconstruction img{
+  width: 30vw;
+  height: auto;
+}
+
 /* Responsive Design */
 
 @media (height <= 1080px) {

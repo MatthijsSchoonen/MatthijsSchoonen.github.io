@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Viewport for Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title -->
+    <title>Matthijs Schoonen | Portfolio - Software Developer</title>
+    <link rel="icon" type="image/x-icon" href="/matthijsschoonen.github.io/img/favicon.ico">
+    
+    <meta name="description" content="Welcome to Matthijs Schoonen's portfolio website. Explore my projects, skills, and professional work in software development.">
+    <meta name="keywords" content="Matthijs Schoonen, portfolio, software developer, web development, GitHub Pages, programming projects, frontend, backend, Unity, Ionic, kaboom.js">
+    <meta name="author" content="Matthijs Schoonen">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Matthijs Schoonen | Portfolio">
+    <meta property="og:description" content="Explore Matthijs Schoonen's portfolio showcasing software development projects, skills, and more.">
+    <meta property="og:url" content="https://matthijsschoonen.github.io/">
+    <meta property="og:image" content="https://matthijsschoonen.github.io/img/me.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Matthijs Schoonen | Portfolio">
+    <meta name="twitter:description" content="Discover my software development projects, skills, and experience.">
+    <meta name="twitter:image" content="https://matthijsschoonen.github.io/img/me.jpg">
+    
+    <link rel="icon" href="/matthijsschoonen.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <header>
+    <div class="headerContainer">
+      <div class="titleContainer">
+        <div class="whiteBubble"><p class="RedText">M</p></div>
+        <p>Matthijs</p>
+      </div>
+
+      <div class="navContainer">
+        <a href="/MatthijsSchoonen.github.io/#intro" data-translate="Home">Home</a>
+        <a href="/MatthijsSchoonen.github.io/#about" data-translate="About">About</a>
+        <a href="/MatthijsSchoonen.github.io/#skills" data-translate="skills">Skills</a>
+        <a href="/MatthijsSchoonen.github.io/#projects" data-translate="Projects">Projects</a>
+      </div>
+
+      <div class="headerRightContainer">
+        <button class="language-btn" data-lang="en"><img class="translateImg" src="img/nl.svg" alt="Dutch"></button>
+        <button class="language-btn" data-lang="nl"><img class="translateImg" src="img/uk.svg" alt="English"></button>
+          <div class="contactBubble">
+            <a href="/MatthijsSchoonen.github.io/#contact" data-translate="ContactMe">Contact me</a>
+          </div>
+      </div>
+      
+
+    </div>
+  </header>
+
+  <main>
+    <div class="underconstruction">
+        <img src="img/underconstruction.png" >
+    </div>
+    
+  </main>
+</body>
+
+<script>
+    let translations = {};
+
+async function loadTranslations() {
+  const response = await fetch('translations/translations.json');
+  translations = await response.json();
+}
+
+function changeLanguage(language) {
+  document.querySelectorAll("[data-translate]").forEach(element => {
+    const key = element.getAttribute("data-translate");
+    if (translations[language] && translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.style.display = btn.getAttribute('data-lang') === language ? 'none' : 'inline-block';
+  });
+}
+
+window.onload = async () => {
+  await loadTranslations();
+
+  let currentLanguage = "en";
+  changeLanguage(currentLanguage);
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selectedLanguage = btn.getAttribute('data-lang');
+      if (selectedLanguage !== currentLanguage) {
+        currentLanguage = selectedLanguage;
+        changeLanguage(currentLanguage);
+      }
+    });
+  });
+}
+</script>
