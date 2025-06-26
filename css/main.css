@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'BahnSchrift';
-  src: url(/fonts/BahnSchrift.ttf) format('truetype');
+  src: url(../fonts/BahnSchrift.ttf) format('truetype');
 }
 
 * {
@@ -156,7 +156,7 @@ section{
 }
 
 .backgroundCircle {
-  background-image: url("/img/BackgroundPatern.png");
+  background-image: url("../img/BackgroundPatern.png");
   background-size: contain;
   border-radius: 50%;
   overflow: hidden;
