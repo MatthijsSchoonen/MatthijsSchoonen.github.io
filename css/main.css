@@ -335,7 +335,8 @@ button{
 .whitebackground{
   background-color: #ffffff;
   border-radius: 0;
-  height: 120vh;
+  min-height: 120vh;
+  height: auto;
 }
 
 .skillsContainer{
