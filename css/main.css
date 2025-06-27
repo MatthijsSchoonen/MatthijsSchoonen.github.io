@@ -521,7 +521,8 @@ button{
   background-color: #ffffff;
   padding: 0.5vw;
   border-radius: 1.25vw;
-  height: 68vh;
+  min-height: 68vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 1vh;
