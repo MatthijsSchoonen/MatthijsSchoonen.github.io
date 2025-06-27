@@ -116,7 +116,8 @@ header{
 
 section{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   border-radius: 0  0 5vw 5vw;
 }
 
@@ -305,11 +306,13 @@ button{
   background-color: #ffffff;
   padding: 0.1vw;
   height: 1.75vw;
-  width: 8vw;
+  min-width: 8vw;
+  width: auto;
   text-align: center;
   align-self: center;
   border-radius: 25vw;
   font-size: 1.7rem;
+  white-space: nowrap;
 }
 
 .subject{
@@ -680,6 +683,7 @@ button{
 }
 
 .contactSection{
+  min-height: 50vh;
   height: auto;
   background-color: #ffffff;
   border-radius: 0;
