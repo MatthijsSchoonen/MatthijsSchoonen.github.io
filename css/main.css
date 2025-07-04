@@ -483,6 +483,7 @@ button{
 .skillsCardGrid {
   margin: 0 auto;
   margin-top: 3vh;
+  margin-bottom: 3vh;
   width: 60vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
