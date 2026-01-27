@@ -1,0 +1,31 @@
+[
+  {
+    "titleKey": "GameScoreCentral",
+    "image": "img/GameScoreCentral.png",
+    "skills": ["JavaScript", "Ionic", "Vue"],
+    "date": "2024-11-01",
+    "featured": false,
+    "type": "disabled",
+    "tooltip": "Disabled: Project not ready for release"
+  },
+  {
+    "titleKey": "pizzeria",
+    "image": "img/Pizzeria.png",
+    "skills": ["C#", ".NET", "Xaml"],
+    "date": "2024-08-10",
+    "featured": true,
+    "type": "link",
+    "url": "https://github.com/MatthijsSchoonen/WinUI-ASP.NET-Basics",
+    "tooltip": "Navigate to the github repository"
+  },
+  {
+    "titleKey": "latchpoint",
+    "image": "img/LatchPoint.png",
+    "skills": ["C#", "Unity"],
+    "date": "2023-12-01",
+    "featured": true,
+    "type": "download",
+    "url": "projects/latchpoint_Demo.zip",
+    "tooltip": "Downloads the zip to play a demo"
+  }
+]

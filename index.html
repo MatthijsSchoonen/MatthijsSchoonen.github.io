@@ -253,57 +253,7 @@
           </div>
         </div>
 
-        <div class="projectCardGrid">
-
-            <div class="projectCard">
-               <img class="ProjectImg" src="img/GameScoreCentral.png" />
-               <div class="skillBadgeContainer">
-                  <p class="skillBadge">JavaScript</p><p class="skillBadge">Ionic</p><p class="skillBadge">vue</p>
-               </div>
-               <div class="projectDescriptionContainer">
-                <p class="projectDescription" data-translate="GameScoreCentral">Game Score Central: the hybrid mobile app to keep track of your scores during a game</p>
-                <a class="redBubble disabled" data-tooltip="Disabled: Project not ready for release"><i class="fa-solid fa-arrow-right"></i></a>
-               </div>          
-            </div>
-
-            <div class="projectCard">
-               <img class="ProjectImg cover" src="img/Pizzeria.png" />
-               <div class="skillBadgeContainer">
-                  <p class="skillBadge">C#</p><p class="skillBadge">.NET</p><p class="skillBadge">Xaml</p>
-                </div>
-                <div class="projectDescriptionContainer">
-                  <p class="projectDescription" data-translate="pizzeria">
-                    Pizzeria: an application I built to showcase my C# skills, designed for use in a pizzeria by both customers and employees.
-                  </p>
-                  <a class="redBubble" href="https://github.com/MatthijsSchoonen/WinUI-ASP.NET-Basics" download data-tooltip="Navigate to the github repository"><i class="fa-solid fa-arrow-right"></i></a>
-               </div>          
-            </div>
-
-
-            <div class="projectCard hide">
-               <img class="ProjectImg cover" src="img/LatchPoint.png" />
-               <div class="skillBadgeContainer">
-                  <p class="skillBadge">C#</p><p class="skillBadge">Unity</p>
-                </div>
-                <div class="projectDescriptionContainer">
-                  <p class="projectDescription" data-translate="latchpoint">LatchPoint: a 3D first-person puzzle game with logic challenges and interactive mechanics.</p>
-                  <a class="redBubble" href="projects/latchpoint_Demo.zip" download data-tooltip="Downloads the zip to play a demo"><i class="fa-solid fa-arrow-right"></i></a>
-               </div>          
-            </div>
-
-            <div class="projectCard hide">
-               <img class="ProjectImg" src="img/gamePortofolio.png" />
-               <div class="skillBadgeContainer">
-                  <p class="skillBadge">JavaScript</p><p class="skillBadge">Kaboom.js</p>
-               </div>
-               <div class="projectDescriptionContainer">
-                <p class="projectDescription" data-translate="GamePortfolio">Game Portfolio: a simple 2D game that functions as a portfolio website.</p>
-                <a class="redBubble" href="portofolio" data-tooltip="Navigate to a different web page"><i class="fa-solid fa-arrow-right"></i></a>
-               </div>          
-            </div>
-
-        </div>
-      </div>
+        <div class="projectCardGrid" id="featuredProjects"></div>
     </section>
 
     <!-- seperator -->
@@ -382,6 +332,71 @@
 </html>
 
 <script>
+
+const featuredContainer = document.getElementById("featuredProjects");
+let projects = [];
+
+async function loadProjects() {
+  const res = await fetch("data/projects.json");
+  projects = await res.json();
+  renderFeaturedProjects();
+}
+
+function renderFeaturedProjects() {
+  featuredContainer.innerHTML = "";
+
+  const featured = projects.filter(p => p.featured === true);
+
+  featured.forEach(project => {
+    featuredContainer.appendChild(createProjectCard(project));
+  });
+
+  // re-run translations on dynamic content
+  changeLanguage(currentLanguage);
+}
+
+function createProjectCard(project) {
+  const card = document.createElement("div");
+  card.className = "projectCard";
+
+  const skills = project.skills
+    .map(skill => `<p class="skillBadge">${skill}</p>`)
+    .join("");
+
+  let actionButton = "";
+
+  if (project.type === "link") {
+    actionButton = `
+      <a class="redBubble" href="${project.url}" target="_blank" data-tooltip="${project.tooltip}">
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>`;
+  } 
+  else if (project.type === "download") {
+    actionButton = `
+      <a class="redBubble" href="${project.url}" download data-tooltip="${project.tooltip}">
+        <i class="fa-solid fa-download"></i>
+      </a>`;
+  } 
+  else {
+    actionButton = `
+      <a class="redBubble disabled" data-tooltip="${project.tooltip}">
+        <i class="fa-solid fa-lock"></i>
+      </a>`;
+  }
+
+  card.innerHTML = `
+    <img class="ProjectImg cover" src="${project.image}" />
+    <div class="skillBadgeContainer">${skills}</div>
+    <div class="projectDescriptionContainer">
+      <p class="projectDescription" data-translate="${project.titleKey}"></p>
+      ${actionButton}
+    </div>
+  `;
+
+  return card;
+}
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -433,5 +448,5 @@ window.onload = async () => {
   });
 }
 
-
+loadProjects();
 </script>
