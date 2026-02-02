@@ -12,7 +12,7 @@
     "titleKey": "pizzeria",
     "image": "img/Pizzeria.png",
     "skills": ["C#", ".NET", "Xaml"],
-    "date": "2024-08-10",
+    "date": "2025-04-10",
     "featured": true,
     "type": "link",
     "url": "https://github.com/MatthijsSchoonen/WinUI-ASP.NET-Basics",
@@ -22,10 +22,20 @@
     "titleKey": "latchpoint",
     "image": "img/LatchPoint.png",
     "skills": ["C#", "Unity"],
-    "date": "2023-12-01",
-    "featured": true,
+    "date": "2024-12-01",
+    "featured": false,
     "type": "download",
     "url": "projects/latchpoint_Demo.zip",
     "tooltip": "Downloads the zip to play a demo"
-  }
+  },
+   {
+    "titleKey": "Ascendium",
+    "image": "img/Ascendium.png",
+    "skills": ["C#", "Unity"],
+    "date": "2026-02-02",
+    "featured": true,
+    "type": "link",
+    "url": "https://matthijsschoonen.github.io/Ascendium/",
+    "tooltip": "Navigate to the Game"
+  },
 ]
