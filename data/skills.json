@@ -1,0 +1,38 @@
+[
+  {
+    "title": "C#/.NET",
+    "image": "img/CSharp.png",
+    "featured": true,
+    "descriptionKey": "CSharpSkill"
+  },
+  {
+    "title": "JavaScript",
+    "image": "img/JavaScript.png",
+    "featured": true,
+    "descriptionKey": "javaScriptSkill"
+  },
+  {
+    "title": "Unity",
+    "image": "img/unity.png",
+    "featured": true,
+    "descriptionKey": "UnitySkill"
+  },
+  {
+    "title": "HTML/CSS",
+    "image": "img/HTMLCSS.png",
+    "featured": false,
+    "descriptionKey": "htmlcssSkill"
+  },
+  {
+    "title": "SQL",
+    "image": "img/sql.png",
+    "featured": false,
+    "descriptionKey": "sqlSkill"
+  },
+  {
+    "title": "PHP",
+    "image": "img/php.svg",
+    "featured": false,
+    "descriptionKey": "phpSkill"
+  }
+]
