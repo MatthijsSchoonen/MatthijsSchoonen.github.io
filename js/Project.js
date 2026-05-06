@@ -1,62 +1,155 @@
-const featuredContainer = document.getElementById("featuredProjects");
-let projects = [];
+const track = document.querySelector(".cards");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
+let projects = [];
+let index = 0;
+let isAnimating = false;
+const step = 1;
+let cloneCount = step;
+
+// =======================
+// LOAD PROJECTS
+// =======================
 async function loadProjects() {
   const res = await fetch("data/projects.json");
   projects = await res.json();
-  renderFeaturedProjects();
+
+  renderProjects();
+  initCarousel(); // IMPORTANT: run AFTER render
 }
 
-function renderFeaturedProjects() {
-  featuredContainer.innerHTML = "";
+// =======================
+// RENDER INTO CAROUSEL
+// =======================
+function renderProjects() {
+  track.innerHTML = "";
 
-  const featured = projects.filter(p => p.featured === true);
-
-  featured.forEach(project => {
-    featuredContainer.appendChild(createProjectCard(project));
+  projects.forEach(project => {
+    track.appendChild(createProjectCard(project));
   });
-
-  // re-run translations on dynamic content
-  changeLanguage(currentLanguage);
 }
 
+// =======================
+// CREATE CARD (li.card)
+// =======================
 function createProjectCard(project) {
-  const card = document.createElement("div");
-  card.className = "projectCard";
+  const li = document.createElement("li");
+  li.className = "card";
 
   const skills = project.skills
-    .map(skill => `<p class="skillBadge">${skill}</p>`)
+    .map(skill => `<span class="skillBadge">${skill}</span>`)
     .join("");
 
   let actionButton = "";
 
   if (project.type === "link") {
     actionButton = `
-      <a class="redBubble" href="${project.url}" target="_blank" data-tooltip="${project.tooltip}">
+      <a class="redBubble" href="${project.url}" target="_blank">
         <i class="fa-solid fa-arrow-right"></i>
       </a>`;
   } 
   else if (project.type === "download") {
     actionButton = `
-      <a class="redBubble" href="${project.url}" download data-tooltip="${project.tooltip}">
+      <a class="redBubble" href="${project.url}" download>
         <i class="fa-solid fa-download"></i>
       </a>`;
   } 
   else {
     actionButton = `
-      <a class="redBubble disabled" data-tooltip="${project.tooltip}">
+      <span class="redBubble disabled">
         <i class="fa-solid fa-lock"></i>
-      </a>`;
+      </span>`;
   }
 
-  card.innerHTML = `
-    <img class="ProjectImg cover" src="${project.image}" />
+  li.innerHTML = `
+    <img class="project-img cover" src="${project.image}" />
+    <div class="project-info">
     <div class="skillBadgeContainer">${skills}</div>
     <div class="projectDescriptionContainer">
-      <p class="projectDescription" data-translate="${project.titleKey}"></p>
+      <p class="projectDescription">${project.title}</p>
       ${actionButton}
+    </div>
     </div>
   `;
 
-  return card;
+  return li;
 }
+
+// =======================
+// CAROUSEL LOGIC
+// =======================
+function initCarousel() {
+  let cards = Array.from(track.children);
+
+  // clone edges
+  for (let i = 0; i < cloneCount; i++) {
+    const firstClone = cards[i].cloneNode(true);
+    const lastClone = cards[cards.length - 1 - i].cloneNode(true);
+
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, track.firstChild);
+  }
+
+  let allCards = Array.from(track.children);
+
+  index = cloneCount;
+
+  function getCardWidth() {
+    return allCards[0].getBoundingClientRect().width + 16; // include gap
+  }
+
+  function updatePosition(animate = true) {
+    const offset = -(index * getCardWidth());
+
+    track.style.transition = animate ? "transform 0.5s ease" : "none";
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  function fixLoop() {
+    const realCount = cards.length;
+
+    if (index >= realCount + cloneCount) {
+      index = cloneCount;
+      updatePosition(false);
+    }
+
+    if (index < cloneCount) {
+      index = realCount + cloneCount - 1;
+      updatePosition(false);
+    }
+  }
+
+  nextBtn.onclick = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    index += step;
+    updatePosition();
+
+    setTimeout(() => {
+      fixLoop();
+      isAnimating = false;
+    }, 500);
+  };
+
+  prevBtn.onclick = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    index -= step;
+    updatePosition();
+
+    setTimeout(() => {
+      fixLoop();
+      isAnimating = false;
+    }, 500);
+  };
+
+  updatePosition(false);
+}
+
+// =======================
+// INIT
+// =======================
+loadProjects();

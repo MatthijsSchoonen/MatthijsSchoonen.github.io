@@ -4,9 +4,8 @@
     <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <!-- Viewport for Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -34,204 +33,71 @@
     <link rel="icon" href="/matthijsschoonen.github.io/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="css/main.css" rel="stylesheet">
+
 </head>
-
-
 
 <body>
   <header>
-    <div class="headerContainer">
-      <div class="titleContainer">
-        <div class="whiteBubble"><p class="RedText">M</p></div>
+    <div class="header-content inter-100">
+      <div class="flex-space-between">
+        <img class="icon" src="img/ThreeOrbitsIcon.png">
         <p>Matthijs</p>
       </div>
 
-      <div class="navContainer">
-        <a href="#intro" data-translate="Home">Home</a>
-        <a href="#about" data-translate="About">About</a>
-        <a href="#skills" data-translate="skills">Skills</a>
-        <a href="#projects" data-translate="Projects">Projects</a>
-      </div>
+      <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+      </nav>
 
-      <div class="headerRightContainer">
-        <button class="language-btn" data-lang="en"><img class="translateImg" src="img/nl.svg" alt="Dutch"></button>
-        <button class="language-btn" data-lang="nl"><img class="translateImg" src="img/uk.svg" alt="English"></button>
-          <div class="contactBubble">
-            <a href="#contact" data-translate="ContactMe">Contact me</a>
-          </div>
+      <div class="flex-space-between">
+        <a href="#contact">Contact me</a>
+        <button><img class="icon" src="img/nl.svg" /></button>
       </div>
-      
-
     </div>
   </header>
 
-
-
-
   <main>
-
-    <!-- Intro Section -->
-    <section class="intro" id="intro">
-      <div class="introContainer">
-        <div class="introTextContainer">
-          <div class="introMainText"><p><span data-translate="Iam">I'm</span><span class="RedText"> Matthijs Schoonen,</span></p><p data-translate="yearStudent">a 4th-year student</p><p>Software Developer</p></div>
-          <p class="IntroSecondairyText" data-translate="IntroSecondairyText">Welcome to my portfolio! Explore my journey as a software developer, discover my skills, and check out the projects I've worked on. Scroll down to learn more about me and what I can do.</p>
-        </div>
-
-        <div class="profileWrapper">
-          <div class="backgroundCircle">
-            <img src="img/me.png" class="me" />
-          </div>
-        </div>
+    <section id="home">
+      <div class="home-content inter-100">
+        <h1 class="highlight">Welcome to my portfolio</h1>
+        <p>Explore my projects, skills, and professional work in software development.</p>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section  id="about">
-      <div class="about">
-
-
-        <div class="aboutContainer">
-          <div class="profileWrapper2 hide">
-            <div class="backgroundCircle">
-              <img src="img/me.png" class="me" />
-            </div>
-           </div>
-
-           <div class="aboutTextContainer">
-            <p class="RedText subject" data-translate="About1">-About</p>
-            <p class="Title"><span data-translate="About2">about</span> <span class="RedText">Matthijs Schoonen</span></p>
-            <p class="contentText" data-translate="AbouteMe">I'm a fourth year Software Developer student. Driven by a passion for technology and programming, I’m always eager to learn and grow. Currently, I work at Innovend, where I apply my skills in a professional setting. In my spare time, I enjoy working on personal projects and building computers.</p>
-            <div class="aboutInfo">
-              <p class="subject"><Span class="RedText fontsize3">19</Span><br/><span data-translate="YearsOld">Years Old</span></p>
-              <p class="subject"><Span class="RedText fontsize3" data-translate="Fourth">Fourth</Span><br/><span data-translate="YearStudent">Year student</span></p>
-              <p class="subject"><Span class="RedText fontsize3">Oud Gastel</Span><br/><span data-translate="HomeTown">HomeTown</span></p>
-            </div>
-            <button class="RedBorder" onclick="window.open('https://github.com/MatthijsSchoonen/cv', '_blank')"><p class="whiteborder" data-translate="cv">Navigate to CV </p><Span class="RedText"><i class="fa-solid fa-arrow-right  whiteBubble"></i></Span></button>
-
-           </div>
-        
+    <section id="about">
+      <div class="profile-container inter-100">
+        <img class="profile-img" src="img/me.png" alt="Matthijs Schoonen">
+      </div>
+      <div class="about-container">
+        <h1 class="highlight">About Me</h1>
+        <p >Hi, I'm <span class="highlight">Matthijs Schoonen</span>, a passionate software developer with a strong background in web development and game development. I have experience working with various technologies, including Unity, Ionic, and kaboom.js. I enjoy creating innovative solutions and continuously learning new skills to stay at the forefront of the industry.</p>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="projects">
+      <div class="projects-header inter-100">
+        <h1 class="highlight">Projects</h1>
+         <div class="actions"><button class="prev">&#x25C0; Prev</button><button class="next">Next &#x25B6;</button></div>
+      </div>
 
-    <section class="whitebackground" id="skills">
-        <div class="skillsContainer">
-          <div class="subjectContainer">
-            <p class="RedText subject" data-translate="skills1">-Skills</p>
-            <div class="skillsTitleContainer">
-              <p class="Title" data-translate="mySkills">My Skills</p>
-              <a class="RedText f2" href="UnderContstuction.html" href="UnderContstuction.html"><span data-translate="viewAllSkills">View all Skills </span> <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-              
-          </div>
-
-          <div class="skillsCardGrid" id="FeaturedSkills">
-
-          </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-
-    <section class="projectsSection" id="projects">
-      <div class="projectsContainer">
-        <div>
-          <p class="RedText subject center" data-translate="projects1">-Projects</p>
-          <div class="projectTitleContainer">
-            <p class="projectTitle" data-translate="MylatestProjects">My Latest Projects</p>
-            <a class="RedText f2" href="UnderContstuction.html"><span data-translate="viewAllProjects">View all Projects</span> <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="projectCardGrid" id="featuredProjects"></div>
-    </section>
-
-    <!-- seperator -->
-    <div class="seperator">
-        <p data-translate="MoreProjectsComingSoon" class="hide">More projects coming soon!</p>
-    </div>
-     <!-- Contact Section -->
-
-
-     <section class="contactSection" id="contact">
-      <div class="contactContainer">
-        <div class="contactTitleContainer">
-          <p class="contactTitle" data-translate="letsKeepInTouch">Lets's Keep Contact</p>
-          <button class="blackBorder" onclick="window.open('https://github.com/MatthijsSchoonen/cv', '_blank')">
-            <p class="whiteborder">Navigate to CV </p>
-            <span class="blackText"><i class="fa-solid fa-arrow-right whiteBubble"></i></span>
-          </button>
-        </div>
-        <div class="line"></div>
-        <div class="contactInfoContainer">
-          <div class="contactTextContainer">
-            <div class="titleContainer">
-              <p class="RedText BlackBubble">M</p><p class="boldName">Matthijs</p>
-            </div>
-            <p class="contactText" data-translate="ContactText">
-              You can contact me if you have any questions, need an application, or want to offer me a job.
-              I am always open to discussing new projects, freelance opportunities, or collaborations. Whether you have a specific idea in mind or just want to connect, feel free to reach out. I look forward to hearing from you and exploring how we can work together to achieve your goals.
-            </p>
-            <div class="socialsContainer">
-              <a class="redBubble" href="https://www.instagram.com/matthijs_schoonen/"><i class="fa-brands fa-instagram"></i></a>
-              <a class="redBubble" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a class="redBubble" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-              <a class="redBubble" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-
-          <div class="m1">
-            <p class="RedText boldName">Navigation</p>
-            <div class="contactLinks">
-               <a href="#intro" data-translate="Home">Home</a>
-              <a href="#about" data-translate="About">About</a>
-              <a href="#skills" data-translate="skills">Skills</a>
-              <a href="#projects" data-translate="Projects">Projects</a>
-            </div>
-          </div>
-
-          <div class="m1">
-            <p class="RedText boldName">Contact</p>
-              <a href="mailto:schoonenmatthijs@gmail.com">schoonenmatthijs@gmail.com</a>
-              <a href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/">linkedin</a>
-              <a href="https://www.instagram.com/matthijs_schoonen/">instagram</a>
-              <a href="https://github.com/MatthijsSchoonen">github</a>
-          </div>
+      <div>
+        <div class="gallery">
+          <ul class="cards">       
+          </ul>	
         </div>
       </div>
-     </section>
+     
+    </section>
 
   </main>
 
-  <footer>
-    <div class="footerContainer">
-      <div class="left">
-        <a href="#intro"><i class="fa-solid fa-arrow-up"></i> <span data-translate="backtoTop">to top</span></a>
-      </div>
-      <div class="center">
-        <p><i class="fa-regular fa-copyright"></i> <span id="year"></span> Matthijs Schoonen</p>
-      </div>
-      <div class="right">
-        <p data-translate="inCollaborationWith">Made in collaboration with graphic designer Sietse Bolders</p>
-      </div>
-    </div>
-  </footer>
-
-
 </body>
-</html>
-
 
 <script src="js/Project.js"></script>
-<script src="js/Skill.js"></script>
-<script src="js/Translate.js"></script>
 
 <script>
-
-let currentLanguage = "en";
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -244,10 +110,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
 
-
-
-loadProjects();
-loadFeaturedSkills();
 </script>
