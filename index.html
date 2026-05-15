@@ -77,25 +77,23 @@
     </section>
 
     <section id="projects">
-      <div class="projects-header inter-100">
-        <h1 class="highlight">Projects</h1>
-         <div class="actions"><button class="prev">&#x25C0; Prev</button><button class="next">Next &#x25B6;</button></div>
+      <div class="projects-intro inter-100">
+        <h1 class="section-title highlight">Projects</h1>
+        <p>Browse a selection of portfolio work, complete with links, downloads, and featured demos.</p>
       </div>
 
-      <div>
-        <div class="gallery">
-          <ul class="cards">       
-          </ul>	
-        </div>
+      <div id="carousel-1" class="carousel" role="region" aria-labelledby="carousel-1-title" tabindex="0">
+        <h2 id="carousel-1-title" class="visually-hidden">Projects carousel</h2>
+        <div class="carousel-inner"></div>
       </div>
-     
     </section>
 
   </main>
 
+  <script src="js/Project.js" defer></script>
+
 </body>
 
-<script src="js/Project.js"></script>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
