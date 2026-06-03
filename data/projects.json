@@ -1,12 +1,13 @@
 [
   {
-    "titleKey": "GameScoreCentral",
-    "image": "img/GameScoreCentral.png",
-    "skills": ["JavaScript", "Ionic", "Vue"],
-    "date": "2024-11-01",
+    "titleKey": "GamePortfolio",
+    "image": "img/GamePortfolio.png",
+    "skills": ["JavaScript"],
+    "date": "2024-10-04",
     "featured": false,
-    "type": "disabled",
-    "tooltip": "Disabled: Project not ready for release"
+    "type": "link",
+    "url": "https://matthijsschoonen.github.io/portofolio/",
+    "tooltip": "Navigate to the Game"
   },
   {
     "titleKey": "pizzeria",
@@ -37,5 +38,16 @@
     "type": "link",
     "url": "https://matthijsschoonen.github.io/Ascendium/",
     "tooltip": "Navigate to the Game"
+  },
+   {
+    "titleKey": "FrozenSounds",
+    "image": "img/FrozenSounds.png",
+    "skills": ["C#", "Unity"],
+    "date": "2024-06-01",
+    "featured": true,
+    "type": "link",
+    "url": "https://matthijs-schoonen.itch.io/frozen-sounds",
+    "tooltip": "Navigate to the Game"
   }
+
 ]
