@@ -19,19 +19,3 @@ function changeLanguage(language) {
   });
 }
 
-window.onload = async () => {
-  await loadTranslations();
-
-
-  changeLanguage(currentLanguage);
-
-  document.querySelectorAll('.language-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const selectedLanguage = btn.getAttribute('data-lang');
-      if (selectedLanguage !== currentLanguage) {
-        currentLanguage = selectedLanguage;
-        changeLanguage(currentLanguage);
-      }
-    });
-  });
-}

@@ -90,7 +90,8 @@
 
   </main>
 
-  <script src="js/Project.js" defer></script>
+<script src="js/Project.js" defer></script>
+<script src="js/Translate.js" defer></script>
 
 </body>
 
@@ -107,6 +108,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+currentLanguage = 'en';
+
+window.onload = async () => {
+  await loadTranslations();
+
+
+  changeLanguage(currentLanguage);
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selectedLanguage = btn.getAttribute('data-lang');
+      if (selectedLanguage !== currentLanguage) {
+        currentLanguage = selectedLanguage;
+        changeLanguage(currentLanguage);
+      }
+    });
+  });
+}
 
 
 </script>

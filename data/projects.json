@@ -10,7 +10,7 @@
     "tooltip": "Navigate to the Game"
   },
   {
-    "titleKey": "pizzeria",
+    "titleKey": "Pizzeria",
     "image": "img/Pizzeria.png",
     "skills": ["C#", ".NET", "Xaml"],
     "date": "2025-04-10",
@@ -20,7 +20,7 @@
     "tooltip": "Navigate to the github repository"
   },
   {
-    "titleKey": "latchpoint",
+    "titleKey": "Latchpoint",
     "image": "img/LatchPoint.png",
     "skills": ["C#", "Unity"],
     "date": "2024-12-01",

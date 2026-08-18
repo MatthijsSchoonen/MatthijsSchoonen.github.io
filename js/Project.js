@@ -288,9 +288,11 @@ const buildSlideFromProject = (project, index) => {
     project.titleKey
   );
 
+  const description = createElement('p', { class: 'slide-description', 'data-translate': project.titleKey });
+
   const meta = createElement('div', { class: 'slide-meta' }, []);
   const date = createElement('span', {}, `Released: ${project.date}`);
-  const skills = createElement('span', {}, project.skills.join(' • '));
+  const skills = createElement('span', {}, project.skills.join(' ï¿½ '));
   meta.append(date, skills);
 
   const actions = createElement('div', { class: 'slide-actions' });
@@ -333,7 +335,7 @@ const buildSlideFromProject = (project, index) => {
   const tooltip = createElement('span', { class: 'slide-meta' }, project.tooltip || '');
 
   actions.append(actionElement);
-  caption.append(title, meta, actions);
+  caption.append(title,description, meta, actions);
   slideContent.append(image, overlay, caption);
   slide.appendChild(slideContent);
 
