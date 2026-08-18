@@ -485,15 +485,34 @@ header{
 /* Contact Section*/
 
 #Contact {
-  background-color: var(--bg-secondary);
-  height: 100vh;
+ background-image:
+  linear-gradient(
+    color-mix(in srgb, var(--bg-secondary) 100%, transparent),
+    color-mix(in srgb, var(--bg-secondary) 95%, transparent),
+    color-mix(in srgb, var(--bg-secondary) 90%, transparent),
+    color-mix(in srgb, var(--bg-secondary) 85%, transparent),
+     color-mix(in srgb, var(--bg-secondary) 80%, transparent)
+  ),
+  url(/img/bg3.png);
+  background-size: cover;
+  background-position: center;
+  border-top: 3px dotted var(--text-secondary);
+}
+
+.ContactTitle{
+  text-align: start;
+  font-size: clamp(2rem, 4vw, 3rem);
+  padding: 5vh 0;
+  margin: 0 auto;
+  width: 80vw;
 }
 
 input, textarea {
   border: 1px solid var(--text-secondary);
   border-radius: 5px;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   color: var(--text-primary);
+
 }
 
 .ContactContainer{
@@ -502,6 +521,7 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 5vh;
 }
 
 .ContactItemContainers{
@@ -509,6 +529,7 @@ input, textarea {
   flex-direction: column;
   gap: 0.5rem;
   width: 30%;
+
 }
 
 .ContactItem{
@@ -518,9 +539,56 @@ input, textarea {
   gap: 1rem;
 }
 
+.contactFormContainer{
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 30vw;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.35);
+}
+
 #contactForm{
   display: flex;
   flex-direction: column;
-  
+  width: 80%;
+  margin: 0 auto;
 }
 
+#contactForm input, #contactForm textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 20vh;
+}
+
+#contactForm button {
+  background-color: var(--accent);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.vertical-seperator{
+  width: 5px;
+  height: auto;
+  align-self: stretch;
+  flex-shrink: 0;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+#copyright{
+  text-align: center;
+}
+
+.w65{
+  width: 65%;
+}

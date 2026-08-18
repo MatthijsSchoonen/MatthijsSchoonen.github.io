@@ -147,18 +147,14 @@
     </section>
 
     <section id="Contact">
-      <h1 class="highlight">Contact Me</h1>
+      <h1 class="highlight ContactTitle">Contact Me</h1>
       <div class="ContactContainer">
 
-        <div class="ContactItemContainers">
-              <a class="contactItem" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i><p>email - schoonenmatthijs@gmail.com</p></a>
-              <a class="contactItem" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-square-linkedin"></i><p>LinkedIn - matthijs-schoonen</p></a>
-              <a class="contactItem" href="https://www.instagram.com/matthijs_schoonen"><i class="fa-brands fa-instagram"></i><p>Instagram - matthijs_schoonen</p></a>
-              <a class="contactItem" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i><p>GitHub - MatthijsSchoonen</p></a>
-              <a class="contactItem" href="https://matthijs-schoonen.itch.io/"><i class="fa-brands fa-itch-io"></i><p>Itch.io - matthijs-schoonen</p></a>
-        </div>
-
+        <div class="w65">
+        <div class="contactFormContainer">
          <form id="contactForm">
+          <h2 class="highlight">Sent Me a Message</h2>
+
           <label for="name">Name:</label>
           <input type="text" id="name" placeholder="Name" required>
 
@@ -170,6 +166,21 @@
           
           <button type="submit">Send</button>
         </form>
+        </div>
+        </div>
+
+        <div class="vertical-seperator"></div>
+
+        <div class="ContactItemContainers">
+              <a class="contactItem" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i><p>email - schoonenmatthijs@gmail.com</p></a>
+              <a class="contactItem" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-square-linkedin"></i><p>LinkedIn - matthijs-schoonen</p></a>
+              <a class="contactItem" href="https://www.instagram.com/matthijs_schoonen"><i class="fa-brands fa-instagram"></i><p>Instagram - matthijs_schoonen</p></a>
+              <a class="contactItem" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i><p>GitHub - MatthijsSchoonen</p></a>
+              <a class="contactItem" href="https://matthijs-schoonen.itch.io/"><i class="fa-brands fa-itch-io"></i><p>Itch.io - matthijs-schoonen</p></a>
+        </div>
+
+        
+        
    
       </div>
 
@@ -177,6 +188,10 @@
 
 
   </main>
+
+  <footer>
+    <p id="copyright">&copy; 2026 Matthijs Schoonen.</p>
+  </footer>
 
 </body>
 
@@ -216,5 +231,8 @@ window.onload = async () => {
   });
 }
 
+const copyRightElement = document.getElementById('copyright');
+const currentYear = new Date().getFullYear(); 
 
+copyRightElement.textContent = `© ${currentYear} Matthijs Schoonen.`;
 </script>
