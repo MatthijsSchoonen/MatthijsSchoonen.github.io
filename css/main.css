@@ -482,3 +482,45 @@ header{
   -webkit-mask-image: url("../img/mysql.svg");
 }
 
+/* Contact Section*/
+
+#Contact {
+  background-color: var(--bg-secondary);
+  height: 100vh;
+}
+
+input, textarea {
+  border: 1px solid var(--text-secondary);
+  border-radius: 5px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.ContactContainer{
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ContactItemContainers{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30%;
+}
+
+.ContactItem{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#contactForm{
+  display: flex;
+  flex-direction: column;
+  
+}
+

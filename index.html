@@ -146,13 +146,43 @@
       </div>
     </section>
 
+    <section id="Contact">
+      <h1 class="highlight">Contact Me</h1>
+      <div class="ContactContainer">
+
+        <div class="ContactItemContainers">
+              <a class="contactItem" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i><p>email - schoonenmatthijs@gmail.com</p></a>
+              <a class="contactItem" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-square-linkedin"></i><p>LinkedIn - matthijs-schoonen</p></a>
+              <a class="contactItem" href="https://www.instagram.com/matthijs_schoonen"><i class="fa-brands fa-instagram"></i><p>Instagram - matthijs_schoonen</p></a>
+              <a class="contactItem" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i><p>GitHub - MatthijsSchoonen</p></a>
+              <a class="contactItem" href="https://matthijs-schoonen.itch.io/"><i class="fa-brands fa-itch-io"></i><p>Itch.io - matthijs-schoonen</p></a>
+        </div>
+
+         <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Name" required>
+
+          <label for="subject">Subject:</label> 
+          <input type="text" id="subject" placeholder="Subject" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="Message" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+   
+      </div>
+
+    </section>
+
 
   </main>
 
-  <script src="js/Project.js" defer></script>
+
 
 </body>
-
+<script src="js/Project.js" defer></script>
+<script src="js/MailHelper.js" defer></script>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
