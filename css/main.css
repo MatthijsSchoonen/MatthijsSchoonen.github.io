@@ -122,15 +122,7 @@ header{
 /* About Section*/
 
 #about{
-  background-image:
-  linear-gradient(
-    color-mix(in srgb, var(--bg-secondary) 100%, transparent),
-    color-mix(in srgb, var(--bg-secondary) 80%, transparent),
-    color-mix(in srgb, var(--bg-secondary) 100%, transparent)
-  ),
-  url(/img/bg2.jpg);
-  background-size: cover;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   color: var(--text-secondary);
   height: 100vh;
   display: flex;
@@ -140,27 +132,38 @@ header{
 .profile-container{
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  padding-right: 5vw;
   align-items: center;
-  max-width: 40vw;
-  background-color: var(--bg-primary);
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  max-width: 50vw;
+   background-image:
+  linear-gradient(
+    color-mix(in srgb, var(--bg-secondary) 100%, transparent),
+    color-mix(in srgb, var(--bg-secondary) 80%, transparent),
+    color-mix(in srgb, var(--bg-secondary) 100%, transparent)
+  ),
+  url(/img/bg2.jpg);
+  background-size: cover;
+  background-color: var(--bg-secondary);
+  border-radius: 100vh 0% 0% 100vh;
 }
 
 .profile-img{
-  max-height: 60vh;
-  border-radius: 50%;
+  max-height: 50vh;
+  border-radius: 100%;
+  border: 5px solid var(--bg-secondary);
 }
 
 .about-container{
   margin: 0 10vw;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   width: 30vw;
   height: 100vh;
-  text-align: end;
+  text-align: start;
+  background-color: var(--bg-primary);
 }
 
 /* Project Section*/
@@ -410,3 +413,72 @@ header{
 }
 
 /* carousel */
+
+
+
+/* TechStack Section*/
+
+#TechStack
+{
+  background: linear-gradient(var(--bg-primary), var(--bg-secondary));
+}
+
+.techStackTitle{
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 5vh 0;
+}
+
+.techStackGrid{
+  display: grid;
+  width: 80vw;
+  margin: 0 auto; 
+  grid-template-columns: auto auto auto auto auto;
+  gap: 5vh;
+  padding-bottom: 5vh;
+}
+
+
+.techStackItem{
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.techStackItem i{
+  font-size: 3rem;
+}
+
+.techIcon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: var(--text-primary);
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+.techIcon.dotnet {
+  mask-image: url("../img/DotNet.svg");
+  -webkit-mask-image: url("../img/DotNet.svg");
+}
+
+.techIcon.csharp {
+  mask-image: url("../img/CSharp.svg");
+  -webkit-mask-image: url("../img/CSharp.svg");
+}
+
+.techIcon.ionic {
+  mask-image: url("../img/Ionic.svg");
+  -webkit-mask-image: url("../img/Ionic.svg");
+}
+
+.techIcon.mysql {
+  mask-image: url("../img/mysql.svg");
+  -webkit-mask-image: url("../img/mysql.svg");
+}
+
