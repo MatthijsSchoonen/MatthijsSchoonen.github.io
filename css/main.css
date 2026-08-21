@@ -69,6 +69,56 @@ button, input[type="submit"], input[type="reset"] {
   color: var(--accent);
 }
 
+.vw10{
+  width: 10vw;
+}
+
+.vw30{
+  width: 30vw;
+}
+
+.w60{
+  width: 60%;
+}
+
+.w80{
+  width: 80%;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-align-start{
+  text-align: start;
+}
+
+.fs1-8{
+  font-size: 1.8rem;
+}
+
+.fs1-5{
+  font-size: 1.5rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ptb-3{
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
 /* header styles */
 
 header{
@@ -82,7 +132,7 @@ header{
 
 .header-content{
   margin: 0 auto;
-  width: 80%;
+  width: 80vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -181,7 +231,7 @@ header{
 }
 
 .projects-intro {
-  max-width: 54rem;
+  width: 80vw;
   text-align: center;
   color: var(--text-primary);
   margin: 0 auto 2rem;
@@ -423,11 +473,6 @@ header{
   background: linear-gradient(var(--bg-primary), var(--bg-secondary));
 }
 
-.techStackTitle{
-  text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin: 5vh 0;
-}
 
 .techStackGrid{
   display: grid;
@@ -499,14 +544,6 @@ header{
   border-top: 3px dotted var(--text-secondary);
 }
 
-.ContactTitle{
-  text-align: start;
-  font-size: clamp(2rem, 4vw, 3rem);
-  padding: 5vh 0;
-  margin: 0 auto;
-  width: 80vw;
-}
-
 input, textarea {
   border: 1px solid var(--text-secondary);
   border-radius: 5px;
@@ -522,6 +559,7 @@ input, textarea {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 5vh;
+  font-size: 1.5rem;
 }
 
 .ContactItemContainers{
@@ -537,13 +575,14 @@ input, textarea {
   text-align: center;
   align-items: center;
   gap: 1rem;
+  font-size: 1.5rem;
 }
 
 .contactFormContainer{
   background-color: var(--bg-secondary);
   border-radius: 10px;
   padding: 2rem;
-  width: 30vw;
+  width: 40vw;
   box-shadow: 0 26px 70px rgba(0, 0, 0, 0.35);
 }
 
@@ -589,6 +628,6 @@ input, textarea {
   text-align: center;
 }
 
-.w65{
-  width: 65%;
-}
+
+
+
