@@ -41,20 +41,20 @@
     <div class="header-content inter-100">
       <div class="flex-space-between vw10">
         <img class="icon" src="img/ThreeOrbitsIcon.png">
-        <p class="fs1-8">Matthijs</p>
+        <p class="fs1-8" data-translate="BrandName">Matthijs</p>
       </div>
 
       <nav class="fs1-8 vw30 flex-space-between">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#TechStack">Tech Stack</a>
-          <a href="#contact">Contact me</a>
+          <a href="#home" data-translate="Home">Home</a>
+          <a href="#about" data-translate="About">About</a>
+          <a href="#projects" data-translate="Projects">Projects</a>
+          <a href="#TechStack" data-translate="TechStack">Tech Stack</a>
+          <a href="#contact" data-translate="ContactMe">Contact me</a>
       </nav>
 
       <div class="flex-end vw10">      
-        <button class="language-btn" data-lang="nl"><img class="icon" src="img/nl.svg" /></button>
-        <button class="language-btn" data-lang="en"><img class="icon" src="img/uk.svg" /></button>
+        <button class="language-btn" data-lang="nl"><img class="icon" src="img/uk.svg" /></button>
+        <button class="language-btn" data-lang="en"><img class="icon" src="img/nl.svg" /></button>
       </div>
     </div>
   </header>
@@ -62,15 +62,15 @@
   <main>
     <section id="home">
       <div class="home-content inter-100">
-        <h1 class="highlight section-title">Welcome to my portfolio</h1>
-        <p class="fs1-5">Explore my projects, skills, and professional work in software development.</p>
+        <h1 class="highlight section-title" data-translate="HeroTitle">Welcome to my portfolio</h1>
+        <p class="fs1-5" data-translate="HeroSubtitle">Explore my projects, skills, and professional work in software development.</p>
       </div>
     </section>
 
     <section id="about">
       <div class="about-container inter-100">
-        <h1 class="highlight section-title">About Me</h1>
-        <p class="fs1-5">Hi, I'm <span class="highlight">Matthijs Schoonen</span>, a passionate software developer with a strong background in web development and game development. I have experience working with various technologies, including Unity, Ionic, and kaboom.js. I enjoy creating innovative solutions and continuously learning new skills to stay at the forefront of the industry.</p> 
+        <h1 class="highlight section-title" data-translate="AboutTitle">About Me</h1>
+        <p class="fs1-5"><span data-translate="AboutIntroLead">Hi, I'm</span> <span class="highlight">Matthijs Schoonen</span><span data-translate="AboutIntroRest">, a passionate software developer with a strong background in web development and game development. I have experience working with various technologies, including Unity, Ionic, and kaboom.js. I enjoy creating innovative solutions and continuously learning new skills to stay at the forefront of the industry.</span></p>
       </div>
       <div class="profile-container">
          <img class="profile-img" src="img/MeNew.png" alt="Matthijs Schoonen">
@@ -79,8 +79,8 @@
 
     <section id="projects">
       <div class="projects-intro inter-100">
-        <h1 class="section-title highlight">Projects</h1>
-        <p class="fs1-5">Browse a selection of portfolio work, complete with links, downloads, and featured demos.</p>
+        <h1 class="section-title highlight" data-translate="Projects">Projects</h1>
+        <p class="fs1-5" data-translate="ProjectsSubtitle">Browse a selection of portfolio work, complete with links, downloads, and featured demos.</p>
       </div>
 
       <div id="carousel-1" class="carousel" role="region" aria-labelledby="carousel-1-title" tabindex="0">
@@ -91,7 +91,7 @@
 
     
     <section id="TechStack" class="inter-100">
-      <h1 class="highlight section-title w80 text-center center ptb-3">My Current TechStack</h1>
+      <h1 class="highlight section-title w80 text-center center ptb-3" data-translate="MyCurrentTechStack">My Current TechStack</h1>
       <div class="techStackGrid">
         <div class="techStackItem">
           <div class="techIcon dotnet" role="img" aria-label=".NET"></div>
@@ -149,24 +149,24 @@
     </section>
 
     <section id="Contact" class="inter-100">
-      <h1 class="highlight section-title w80 text-start center ptb-3">Contact Me</h1>
+      <h1 class="highlight section-title w80 text-start center ptb-3" data-translate="ContactTitle">Contact Me</h1>
       <div class="ContactContainer">
 
         <div class="w60">
         <div class="contactFormContainer">
          <form id="contactForm">
-          <h2 class="highlight">Send Me a Message</h2>
+          <h2 class="highlight" data-translate="SendMessageTitle">Send Me a Message</h2>
 
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Name" required>
+          <label for="name" data-translate="NameLabel">Name:</label>
+          <input type="text" id="name" placeholder="Name" data-translate="NamePlaceholder" required>
 
-          <label for="subject">Subject:</label> 
-          <input type="text" id="subject" placeholder="Subject" required>
+          <label for="subject" data-translate="SubjectLabel">Subject:</label>
+          <input type="text" id="subject" placeholder="Subject" data-translate="SubjectPlaceholder" required>
 
-          <label for="message">Message:</label>
-          <textarea id="message" placeholder="Message" required></textarea>
+          <label for="message" data-translate="MessageLabel">Message:</label>
+          <textarea id="message" placeholder="Message" data-translate="MessagePlaceholder" required></textarea>
           
-          <button type="submit" class="fs1-5 bold">Send</button>
+          <button type="submit" class="fs1-5 bold" data-translate="SendButton">Send</button>
         </form>
         </div>
         </div>
@@ -174,11 +174,11 @@
         <div class="vertical-seperator"></div>
 
         <div class="ContactItemContainers">
-              <a class="contactItem" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i><p>email - schoonenmatthijs@gmail.com</p></a>
-              <a class="contactItem" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-square-linkedin"></i><p>LinkedIn - matthijs-schoonen</p></a>
-              <a class="contactItem" href="https://www.instagram.com/matthijs_schoonen"><i class="fa-brands fa-instagram"></i><p>Instagram - matthijs_schoonen</p></a>
-              <a class="contactItem" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i><p>GitHub - MatthijsSchoonen</p></a>
-              <a class="contactItem" href="https://matthijs-schoonen.itch.io/"><i class="fa-brands fa-itch-io"></i><p>Itch.io - matthijs-schoonen</p></a>
+            <a class="contactItem" href="mailto:schoonenmatthijs@gmail.com"><i class="fa-solid fa-envelope"></i><p>email - schoonenmatthijs@gmail.com</p></a>
+            <a class="contactItem" href="https://www.linkedin.com/in/matthijs-schoonen-7648a527a/"><i class="fa-brands fa-square-linkedin"></i><p>LinkedIn - matthijs-schoonen</p></a>
+            <a class="contactItem" href="https://www.instagram.com/matthijs_schoonen"><i class="fa-brands fa-instagram"></i><p>Instagram - matthijs_schoonen</p></a>
+            <a class="contactItem" href="https://github.com/MatthijsSchoonen"><i class="fa-brands fa-github"></i><p>GitHub - MatthijsSchoonen</p></a>
+            <a class="contactItem" href="https://matthijs-schoonen.itch.io/"><i class="fa-brands fa-itch-io"></i><p>Itch.io - matthijs-schoonen</p></a>
         </div>
 
       </div>

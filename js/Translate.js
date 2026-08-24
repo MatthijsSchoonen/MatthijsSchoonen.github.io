@@ -1,5 +1,16 @@
 let translations = {};
 
+function applyTranslation(element, translatedValue) {
+  const withYear = translatedValue.replaceAll('{year}', String(new Date().getFullYear()));
+
+  if ((element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') && element.hasAttribute('placeholder')) {
+    element.placeholder = withYear;
+    return;
+  }
+
+  element.textContent = withYear;
+}
+
 
 async function loadTranslations() {
   const response = await fetch('translations/translations.json');
@@ -10,7 +21,7 @@ function changeLanguage(language) {
   document.querySelectorAll("[data-translate]").forEach(element => {
     const key = element.getAttribute("data-translate");
     if (translations[language] && translations[language][key]) {
-      element.textContent = translations[language][key];
+      applyTranslation(element, translations[language][key]);
     }
   });
 
