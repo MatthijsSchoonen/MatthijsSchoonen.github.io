@@ -292,8 +292,7 @@ const buildSlideFromProject = (project, index) => {
 
   const meta = createElement('div', { class: 'slide-meta' }, []);
   const date = createElement('span', {}, `Released: ${project.date}`);
-  const skills = createElement('span', {}, project.skills.join(' � '));
-  meta.append(date, skills);
+  meta.append(date);
 
   const actions = createElement('div', { class: 'slide-actions' });
   let actionElement;

@@ -2,8 +2,7 @@
   {
     "titleKey": "GamePortfolio",
     "image": "img/GamePortfolio.png",
-    "skills": ["JavaScript"],
-    "date": "2024-10-04",
+    "date": "22/10/2024",
     "featured": false,
     "type": "link",
     "url": "https://matthijsschoonen.github.io/portofolio/",
@@ -12,8 +11,7 @@
   {
     "titleKey": "Pizzeria",
     "image": "img/Pizzeria.png",
-    "skills": ["C#", ".NET", "Xaml"],
-    "date": "2025-04-10",
+    "date": "7/04/2025",
     "featured": false,
     "type": "link",
     "url": "https://github.com/MatthijsSchoonen/WinUI-ASP.NET-Basics",
@@ -22,8 +20,7 @@
   {
     "titleKey": "Latchpoint",
     "image": "img/LatchPoint.png",
-    "skills": ["C#", "Unity"],
-    "date": "2024-12-01",
+    "date": "17/01/2025",
     "featured": true,
     "type": "download",
     "url": "projects/latchpoint_Demo.zip",
@@ -32,8 +29,7 @@
    {
     "titleKey": "Ascendium",
     "image": "img/Ascendium.png",
-    "skills": ["C#", "Unity"],
-    "date": "2026-02-02",
+    "date": "7/02/2026",
     "featured": true,
     "type": "link",
     "url": "https://matthijsschoonen.github.io/Ascendium/",
@@ -42,8 +38,7 @@
    {
     "titleKey": "FrozenSounds",
     "image": "img/FrozenSounds.png",
-    "skills": ["C#", "Unity"],
-    "date": "2024-06-01",
+    "date": "8/03/2026",
     "featured": true,
     "type": "link",
     "url": "https://matthijs-schoonen.itch.io/frozen-sounds",

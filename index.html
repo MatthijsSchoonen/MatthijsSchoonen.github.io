@@ -44,7 +44,7 @@
         <p class="fs1-6" data-translate="BrandName">Matthijs</p>
       </div>
 
-      <nav class="fs1-6 vw30 flex-space-between">
+      <nav class="fs1-6 vw30 flex-space-between nav-desktop" id="nav-desktop">
           <a href="#home" data-translate="Home">Home</a>
           <a href="#about" data-translate="About">About</a>
           <a href="#projects" data-translate="Projects">Projects</a>
@@ -52,11 +52,25 @@
           <a href="#contact" data-translate="ContactMe">Contact me</a>
       </nav>
 
-      <div class="flex-end vw10">      
+      <div class="flex-end vw10 header-controls">      
         <button class="language-btn" data-lang="nl"><img class="icon" src="img/uk.svg" /></button>
         <button class="language-btn" data-lang="en"><img class="icon" src="img/nl.svg" /></button>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#home" data-translate="Home" class="mobile-nav-link">Home</a>
+      <a href="#about" data-translate="About" class="mobile-nav-link">About</a>
+      <a href="#projects" data-translate="Projects" class="mobile-nav-link">Projects</a>
+      <a href="#TechStack" data-translate="TechStack" class="mobile-nav-link">Tech Stack</a>
+      <a href="#contact" data-translate="ContactMe" class="mobile-nav-link">Contact me</a>
+    </nav>
   </header>
 
   <main>
@@ -234,4 +248,50 @@ const copyRightElement = document.getElementById('copyright');
 const currentYear = new Date().getFullYear(); 
 
 copyRightElement.textContent = `© ${currentYear} Matthijs Schoonen.`;
+
+// Hamburger Menu Functionality
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navMobile = document.getElementById('nav-mobile');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+// Toggle mobile menu
+hamburgerMenu.addEventListener('click', () => {
+  const isOpen = hamburgerMenu.classList.toggle('active');
+  navMobile.classList.toggle('active');
+  hamburgerMenu.setAttribute('aria-expanded', isOpen);
+  navMobile.setAttribute('aria-hidden', !isOpen);
+});
+
+// Close mobile menu when a link is clicked
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('active');
+    navMobile.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'false');
+    navMobile.setAttribute('aria-hidden', 'true');
+  });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  const isClickInsideMenu = navMobile.contains(e.target);
+  const isClickOnHamburger = hamburgerMenu.contains(e.target);
+  
+  if (!isClickInsideMenu && !isClickOnHamburger && navMobile.classList.contains('active')) {
+    hamburgerMenu.classList.remove('active');
+    navMobile.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'false');
+    navMobile.setAttribute('aria-hidden', 'true');
+  }
+});
+
+// Close mobile menu on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navMobile.classList.contains('active')) {
+    hamburgerMenu.classList.remove('active');
+    navMobile.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'false');
+    navMobile.setAttribute('aria-hidden', 'true');
+  }
+});
 </script>
