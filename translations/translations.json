@@ -3,7 +3,6 @@
     "BrandName": "Matthijs",
     "Home": "Home",
     "About": "About Me",
-    "skills": "Skills",
     "Projects": "Projects",
     "TechStack": "Tech Stack",
     "ContactMe": "Contact me",
@@ -13,7 +12,6 @@
     "AboutIntroLead": "Hi, I am",
     "AboutIntroRest": "I am a passionate software developer with experience building web and mobile applications. I am always looking for new challenges and opportunities to improve my skills.",
     "ProjectsSubtitle": "Check out my projects below, some with links and demos.",
-    "ProjectsCarouselTitle": "Projects carousel",
     "MyCurrentTechStack": "My Current Tech Stack",
     "ContactTitle": "Contact me",
     "SendMessageTitle": "Send me a message",
@@ -23,8 +21,13 @@
     "SubjectPlaceholder": "Subject",
     "MessageLabel": "Message:",
     "MessagePlaceholder": "Message",
-    "SendButton": "Send"
-  },
+    "SendButton": "Send",
+    "GamePortfolio": "An interactive portfolio built as a 2D game using Kaboom.js. Explore the map as a playable character, interact with different locations, and discover information about my skills and projects through in-game dialogue.",
+    "Pizzeria": "A pizza ordering and management application built with WinUI and ASP.NET. The application includes dashboards for managing different order statuses, as well as functionality for creating and editing pizzas, managing toppings, handling orders, and managing users.",
+    "Latchpoint": "A 3D puzzle platformer built in Unity, centered around a grappling gun that can be used to navigate the environment and solve puzzles. The game combines grappling mechanics with lasers, pressure plates, doors, enemies, projectiles, and ziplines to create different challenges.",
+    "Ascendium": "A 2D endless roguelike platformer built in Unity to experiment with procedural generation. Play as a knight and climb an infinite, procedurally generated tower where each floor introduces new platform layouts, enemies, and hazards. The goal is to climb as high as possible and beat your best run.",
+    "FrozenSounds": "A 3D platformer created collaboratively in Unity for Mini Jame Gam #52 under a strict 2.5-day deadline. Use freeze projectiles to freeze enemies and clouds, turning the environment into part of the gameplay as you navigate through a frozen world."
+ },
   "nl": {
     "BrandName": "Matthijs",
     "Home": "Home",
@@ -47,6 +50,11 @@
     "SubjectPlaceholder": "Onderwerp",
     "MessageLabel": "Bericht:",
     "MessagePlaceholder": "Bericht",
-    "SendButton": "Verstuur"
+    "SendButton": "Verstuur",
+    "GamePortfolio": "Een interactieve portfolio gemaakt als een 2D-game met Kaboom.js. Verken de map als speelbaar personage, interacteer met verschillende locaties en ontdek informatie over mijn vaardigheden en projecten via dialogen in de game.",
+    "Pizzeria": "Een applicatie voor het bestellen en beheren van pizza's, gebouwd met WinUI en ASP.NET. De applicatie bevat dashboards voor het beheren van verschillende bestelstatussen en biedt mogelijkheden om pizza's en toppings aan te maken en te bewerken, bestellingen te beheren en gebruikers te beheren.",
+    "Latchpoint": "Een 3D puzzle-platformer gebouwd in Unity, waarbij een grijphaakgeweer centraal staat voor het navigeren door de omgeving en het oplossen van puzzels. De game combineert grapplingmechanieken met lasers, drukplaten, deuren, vijanden, projectielen en ziplines om verschillende uitdagingen te creëren.",
+    "Ascendium": "Een 2D endless roguelike-platformer gebouwd in Unity om procedural generation te testen. Speel als een ridder en beklim een oneindige, procedureel gegenereerde toren waarin elke verdieping nieuwe platformindelingen, vijanden en gevaren introduceert. Het doel is om zo hoog mogelijk te komen en je beste run te verbeteren.",
+    "FrozenSounds": "Een 3D-platformer die samen met een teamgenoot in Unity is gemaakt voor Mini Jame Gam #52 binnen een strakke deadline van slechts 2,5 dagen. Gebruik bevriezingsprojectielen om vijanden en wolken te bevriezen en maak gebruik van de omgeving terwijl je door een bevroren wereld navigeert."
   }
 }
